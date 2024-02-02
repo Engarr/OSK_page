@@ -3,17 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --background-white-1: rgb(248, 241, 241);
+  --background-white-2: rgb(248, 248, 248);
+  --main-page-color: rgb(81, 197, 17);
+  --main-page-color-70: rgb(81, 197, 17, 0.7);
+  --main-page-color-40: rgb(81, 197, 17, 0.4);
+  --black-90: rgba(0, 0, 0, 0.9);
+  --text-white-1: rgb(248, 241, 241);
+  --fb-blue: #0866ff;
+  --ig-violet: rgb(240, 0, 140);
 }
 
 body {
@@ -25,9 +23,6 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.flexCenter {
+  @apply flex items-center justify-center;
 }
