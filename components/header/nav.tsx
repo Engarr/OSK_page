@@ -3,10 +3,10 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { navLinks } from '@/lib/data';
-import { motion } from 'framer-motion';
 import clsx from 'clsx';
 import MenuToggleButton from '../menu-toggle-button/menu-toggle-button';
 import Socialmedia from './socialmedia';
+import { motion } from 'framer-motion';
 
 const Navigation = () => {
   const activeSection = 'OSKNEOCAR';
@@ -14,24 +14,25 @@ const Navigation = () => {
 
   return (
     <>
-      <div className='flexCenter'>
+      <motion.div
+        className='flexCenter'
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}>
         <MenuToggleButton
           toggle={setIsMenuVisible}
           isMenuVisible={isMenuVisible}
         />
-      </div>
-      <motion.nav
-        className='flexCenter'
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ type: 'spring', stiffness: 100 }}>
-        <div
+      </motion.div>
+      <nav className='flexCenter'>
+        <motion.div
           className={clsx(
             'absolute left-0 top-0 bg-[var(--black-90)] w-full h-full transition-all flex text-center flex-col pt-[200px]  tracking-wider lg:relative lg:bg-transparent lg:flexCenter lg:flex-row lg:p-0 lg:w-auto lg:h-auto lg:tracking-normal',
             {
               'left-[100%] lg:left-0': !isMenuVisible,
             }
-          )}>
+          )}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}>
           <ul className=' flexCenter flex-col lg:flex-row gap-3'>
             {navLinks.map((link) => (
               <motion.li
@@ -52,8 +53,8 @@ const Navigation = () => {
             ))}
           </ul>
           <Socialmedia />
-        </div>
-      </motion.nav>
+        </motion.div>
+      </nav>
     </>
   );
 };

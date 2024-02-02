@@ -10,9 +10,9 @@ const Logo = () => {
   return (
     <motion.div
       className='lg:w-[187px] lg:h-[62px] w-[120px] h-[62px] flexCenter'
-      initial={{ opacity: 0, x: -50 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ type: 'spring', stiffness: 100 }}>
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      >
       <Link href='/glowna'>
         <Image src={logo} alt='neocar_logo' priority />
       </Link>

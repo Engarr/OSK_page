@@ -14,9 +14,8 @@ const Header = () => {
         <motion.div
           className='lg:w-[100%] lg:bg-[var(--line-color)] 
         lg:h-[1px] lg:mt-2'
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ type: 'spring', stiffness: 100 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
         />
       </div>
     </motion.section>
