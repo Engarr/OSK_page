@@ -45,7 +45,6 @@ const Navigation = () => {
                   }`}
                   whileHover={{
                     scale: 1.02,
-                    originX: 0,
                     color: 'var(--main-page-color)',
                   }}
                   transition={{ type: 'spring', stiffness: 100 }}>
@@ -62,4 +61,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
-// lg:flexCenter  lg:flex gap-3 xl:gap-4
+

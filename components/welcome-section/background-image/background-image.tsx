@@ -6,7 +6,7 @@ import backgroundMobileImage from '@/public/images/mobile_background.jpg';
 
 const BackgroundImage = () => {
   return (
-    <div className='h-[calc(100vh-82px)] '>
+    <div className='h-[calc(100vh-82px)]  '>
       <Image
         src={backgroundImage}
         alt='background'
