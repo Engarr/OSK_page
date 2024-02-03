@@ -5,7 +5,7 @@ import { TiktokSVG } from '@/lib/svg/tiktok';
 
 const Socialmedia = () => {
   return (
-    <div className='flexCenter gap-7 mt-9 xl:ml-5 lg:mt-0 xl:gap-2  '>
+    <div className='flexCenter gap-7 mt-9 lg:ml-5 lg:mt-0 lg:gap-2  '>
       <FacebookSVG />
       <InstagramSVG />
       <TiktokSVG />
