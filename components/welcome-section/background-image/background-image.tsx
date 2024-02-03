@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import backgroundImage from '@/public/images/bacground-big_devices_2.jpg';
+import backgroundImage from '@/public/images/background-big_devices.jpg';
 import backgroundTabletImage from '@/public/images/tablet_background.jpg';
 import backgroundMobileImage from '@/public/images/mobile_background.jpg';
 
@@ -25,7 +25,7 @@ const BackgroundImage = () => {
         priority
         fill
         sizes='100vh'
-        className='hiden md:inline xl:hidden z-[-3] opacity-98'
+        className='hidden md:inline xl:hidden z-[-3] opacity-98'
       />
       <Image
         src={backgroundMobileImage}

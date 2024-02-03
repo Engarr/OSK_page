@@ -22,11 +22,11 @@ const PlanCard = () => {
 
         <div className='flex items-end'>
           <AnimateText
-            style='text-3xl lg:text-4xl font-extrabold pr-2 mt-2'
+            style=' text-2xl lg:text-3xl lg:text-4xl font-extrabold pr-1 mt-1 lg:pr-2 lg:mt-2'
             text='2590'
           />
           <AnimateText
-            style='text-3xl lg:text-xl font-extrabold pr-2 mt-2'
+            style='text-2xl lg:text-3xl lg:text-xl font-extrabold pr-1 mt-1 lg:pr-2 lg:mt-2'
             text='PLN'
           />
         </div>
