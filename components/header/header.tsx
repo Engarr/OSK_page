@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const Header = () => {
   return (
-    <motion.section className=' bg-[var(--black-95)] h-[82px] w-full flex items-center lg:justify-around justify-between p-5 lg:p-0'>
+    <motion.section className=' bg-[var(--black-95)] h-[82px] w-full flex items-center lg:justify-around justify-between p-5 lg:p-0 '>
       <Logo />
       <div>
         <Navigation />
