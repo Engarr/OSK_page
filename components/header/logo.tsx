@@ -12,7 +12,8 @@ const Logo = () => {
       className='lg:w-[187px] lg:h-[62px] w-[120px] h-[62px] flexCenter'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      >
+      whileHover={{ scale: 1.02 }}
+      transition={{ type: 'spring', stiffness: 100 }}>
       <Link href='/glowna'>
         <Image src={logo} alt='neocar_logo' priority />
       </Link>

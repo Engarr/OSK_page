@@ -1,12 +1,14 @@
+import React from 'react';
 import { FacebookSVG } from '@/lib/svg/facebook';
 import { InstagramSVG } from '@/lib/svg/instagram';
-import React from 'react';
+import { TiktokSVG } from '@/lib/svg/tiktok';
 
 const Socialmedia = () => {
   return (
-    <div className='flexCenter gap-5 lg:ml-5 mt-5 lg:mt-0 lg:gap-2  '>
+    <div className='flexCenter gap-7 mt-9 xl:ml-5 lg:mt-0 xl:gap-2  '>
       <FacebookSVG />
       <InstagramSVG />
+      <TiktokSVG />
     </div>
   );
 };

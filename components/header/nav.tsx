@@ -26,14 +26,14 @@ const Navigation = () => {
       <nav className='flexCenter'>
         <motion.div
           className={clsx(
-            'absolute left-0 top-0 bg-[var(--black-90)] w-full h-full transition-all flex text-center flex-col pt-[200px]  tracking-wider lg:relative lg:bg-transparent lg:flexCenter lg:flex-row lg:p-0 lg:w-auto lg:h-auto lg:tracking-normal',
+            'absolute left-0 top-0 bg-[var(--black-95)] w-full h-full transition-all flex text-center flex-col pt-[12.5rem] tracking-wider lg:relative lg:bg-transparent lg:flexCenter lg:flex-row lg:p-0 lg:w-auto lg:h-auto lg:tracking-normal z-20',
             {
               'left-[100%] lg:left-0': !isMenuVisible,
             }
           )}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}>
-          <ul className=' flexCenter flex-col lg:flex-row gap-3'>
+          <ul className=' flexCenter flex-col lg:flex-row gap-5'>
             {navLinks.map((link) => (
               <motion.li
                 key={link.name}

@@ -11,7 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'NEO CAR',
+  title: 'NEOCAR',
   description: 'OSK NEOCAR RZESZÓW',
 };
 
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={poppins.className}>
+      <body className={`${poppins.className}  h-[1000px] overflow-x-hidden`}>
         <Header />
         {children}
       </body>
