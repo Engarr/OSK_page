@@ -13,7 +13,7 @@ const WelcomeCard = () => {
       />
       <PlanCard />
 
-      <div className='flex md:flex-row flex-col bg-[var(--black-60)] relative top-[1rem] md:top-[3.25rem] rounded-md w-full p-2'>
+      <div className='flex md:flex-row flex-col bg-[var(--black-60)] relative top-[1rem] mt-[1.25rem] md:top-[3.25rem] rounded-md w-full p-2'>
         {moreInfo.map((i, index) => (
           <React.Fragment key={index}>
             <InfoBox img={i.img} text={i.text} />
