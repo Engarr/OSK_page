@@ -14,7 +14,7 @@ const Logo = () => {
       animate={{ opacity: 1 }}
       whileHover={{ scale: 1.02 }}
       transition={{ type: 'spring', stiffness: 100 }}>
-      <Link href='/glowna'>
+      <Link href='/'>
         <Image src={logo} alt='neocar_logo' priority />
       </Link>
     </motion.div>

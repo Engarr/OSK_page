@@ -24,8 +24,8 @@ const WelcomeCard = () => {
         xs:mt-[15%]
         s:mt-[20%]
         md:flex-row md:top-[3.25rem]       
-        lg:top-[-0.25rem] lg:w-[200%]      
-        xl:top-[-6.25rem]       
+        lg:top-[-0.25rem] lg:w-[150%]      
+        xl:top-[-6.25rem] xl:w-[110%]      
         '
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -41,10 +41,3 @@ const WelcomeCard = () => {
 };
 
 export default WelcomeCard;
-// bottom-[5%]
-//         xs:p-2 xs:bottom-[50%] xs:mt-[2.25rem]
-//         md:flex-row md:top-[7.25rem]
-//         lg:w-[200%] lg:top-[4.25rem]
-//         xl:w-[150%] xl:top-[4.25rem] absolute
-
-// flex justify-center md:flex-row flex-col bg-[var(--black-60)] relative top-[0.25rem] mt-[0.25rem] md:top-[3.25rem] rounded-md xl:w-[150%] p-1 xs:p-2
