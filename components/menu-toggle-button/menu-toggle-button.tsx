@@ -27,6 +27,7 @@ const MenuToggleButton = ({
         viewBox='0 0 33 33'
         stroke='var(--main-page-color)'>
         <Path
+          d='M 2 9.5 L 30 9.5'
           variants={{
             closed: { d: 'M 2 9.5 L 30 9.5' },
             open: { d: 'M 1.5 29 L 31 5' },
@@ -41,6 +42,7 @@ const MenuToggleButton = ({
           transition={{ duration: 0.1 }}
         />
         <Path
+          d='M 2 23.5 L 30 23.5'
           variants={{
             closed: { d: 'M 2 23.5 L 30 23.5' },
             open: { d: 'M 2 5 L 31.5 29' },
