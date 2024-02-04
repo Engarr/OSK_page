@@ -10,7 +10,10 @@ const Path = (props: any) => {
   return <motion.path strokeWidth='3' strokeLinecap='round' {...props} />;
 };
 
-const MenuToggleButton = ({ toggle, isMenuVisible }: MenuToggleButtonProps) => {
+const MenuToggleButton = ({
+  toggle,
+  isMenuVisible = false,
+}: MenuToggleButtonProps) => {
   return (
     <motion.button
       onClick={() => toggle((prev) => !prev)}

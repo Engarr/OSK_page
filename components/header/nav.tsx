@@ -26,7 +26,7 @@ const Navigation = () => {
       <nav className='flexCenter '>
         <motion.div
           className={cn(
-            'left-0 top-0 bg-[var(--black-95)] w-full h-full transition-all fixed text-center pt-[12.5rem] tracking-wider lg:relative lg:bg-transparent lg:flexCenter lg:flex-row lg:p-0 lg:w-auto lg:h-auto lg:tracking-normal z-20',
+            'left-0 top-0 bg-[var(--black-95)] w-full h-full transition-all fixed text-center pt-[12.5rem] tracking-wider lg:relative lg:bg-transparent lg:flexCenter lg:flex-row lg:p-0 lg:w-auto lg:h-auto lg:tracking-normal z-40',
             {
               'left-[100%] lg:left-0 ': !isMenuVisible,
             }
@@ -61,4 +61,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-

@@ -43,7 +43,7 @@ const Needs = () => {
   const isRequirementsInView = useInView(ref, { once: true, amount: 0.5 });
 
   return (
-    <div className='z-[10] absolute mt-[210px] md:mt-[250px] md:right-[30%] md:translate-x-1/2 md:max-w-[35rem] w-full'>
+    <div className='z-[10] absolute mt-[210px] md:mt-[250px] md:right-[30%] md:translate-x-1/2 md:max-w-[35rem] w-full overflow-hidden'>
       <motion.h3
         ref={ref}
         className='font-bold text-[var(--main-page-color)] text-base md:text-xl xl:text-3xl px-2 mb-1 xl:mb-3 text-center md:text-start'
