@@ -26,7 +26,7 @@ const PlanCard = () => {
             text='2590'
           />
           <AnimateText
-            style='text-2xl lg:text-3xl lg:text-xl font-extrabold pr-1 mt-1 lg:pr-2 lg:mt-2'
+            style='text-base lg:text-xl lg:text-xl font-extrabold pr-1 mt-1 lg:pr-2 lg:mt-2'
             text='PLN'
           />
         </div>

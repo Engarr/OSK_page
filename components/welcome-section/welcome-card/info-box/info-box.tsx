@@ -8,7 +8,7 @@ type InfoBox = {
 
 const InfoBox = ({ img, text }: InfoBox) => {
   return (
-    <div className='flex items-center'>
+    <div className='flex items-center py-1'>
       <Image
         src={img}
         alt={text}
