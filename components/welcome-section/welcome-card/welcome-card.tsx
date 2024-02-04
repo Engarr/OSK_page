@@ -18,13 +18,14 @@ const WelcomeCard = () => {
       <PlanCard />
 
       <motion.div
-        className='relative flex flex-col justify-center bg-[var(--black-60)] rounded-md 
+        className='relative flex flex-col justify-center bg-[var(--black-80)] rounded-md 
         p-1 xs:p-2
         top-[0.25rem] mt-[0.25rem]
         xs:mt-[15%]
         s:mt-[20%]
         md:flex-row md:top-[3.25rem]       
         lg:top-[-0.25rem] lg:w-[200%]      
+        xl:top-[-6.25rem]       
         '
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
