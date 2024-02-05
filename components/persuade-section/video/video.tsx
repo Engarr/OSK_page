@@ -34,6 +34,7 @@ const Video = () => {
           title='Zapraszamy na kurs prawo jazdy'
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
           allowFullScreen
+          loading='lazy'
         />
       </div>
     </motion.div>
