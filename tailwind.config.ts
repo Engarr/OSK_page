@@ -16,6 +16,7 @@ const config: Config = {
       screens: {
         xs: '375px',
         s: '414px',
+        xxxl: '1634px',
       },
       colors: {
         'background-white-1': 'var(--background-white-1)',

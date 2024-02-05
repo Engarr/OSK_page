@@ -1,5 +1,6 @@
 import Requirements from '@/components/requirements-section/requaiers';
 import WelcomeSection from '@/components/welcome-section/welcome-section';
+import PersuadeSection from '@/components/persuade-section/persuade-section';
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <div className='w-full h-[32px]  bottom-0 gradient-background absolute ' />
       </div>
       <Requirements />
+      <PersuadeSection />
     </main>
   );
 }

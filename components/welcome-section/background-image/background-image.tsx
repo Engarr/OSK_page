@@ -10,7 +10,7 @@ const BackgroundImage = () => {
         src={backgroundImage}
         alt='background'
         placeholder='blur'
-        quality={100}
+        quality={80}
         priority
         fill
         sizes='100vh'
@@ -19,7 +19,7 @@ const BackgroundImage = () => {
       <Image
         src={woman}
         alt='zdjęcie kobiety'
-        quality={100}
+        quality={80}
         priority
         className='
         w-[450px] right-[-35%] bottom-0

@@ -6,7 +6,7 @@ import backgroundMobileImage from '@/public/images/next_step_background_phone.jp
 
 const BackgroundImage = () => {
   return (
-    <div className='absolute top-0 bg-[var(--white-80)] w-full h-[100vh] lg:h-[1105px]'>
+    <div className='absolute top-0 bg-[var(--white-80)] w-full h-[10vh] lg:h-[1105px]'>
       <Image
         src={backgroundImage}
         alt='bg-next-setp'

@@ -44,7 +44,6 @@ const Navigation = () => {
                       : 'text-[var(--main-page-color)] font-semibold'
                   }`}
                   whileHover={{
-                    scale: 1.02,
                     color: 'var(--main-page-color)',
                   }}
                   transition={{ type: 'spring', stiffness: 100 }}>
