@@ -7,12 +7,12 @@ const Video = React.lazy(() => import('./video/video'));
 const PersuadeSection = () => {
   return (
     <section className='relative overflow-hidden'>
-      <div className='relative py-5'>
-        <WhyUs />
-        <Suspense fallback={<div>Pobieranie danych...</div>}>
+      <Suspense fallback={<div>Pobieranie danych...</div>}>
+        <div className='relative py-5'>
+          <WhyUs />
           <Video />
-        </Suspense>
-      </div>
+        </div>
+      </Suspense>
       <Opinions />
     </section>
   );
