@@ -12,7 +12,6 @@ const PersuadeSection = () => {
         <Suspense fallback={<div>Pobieranie danych...</div>}>
           <Video />
         </Suspense>
-        <Video />
       </div>
       <Opinions />
     </section>

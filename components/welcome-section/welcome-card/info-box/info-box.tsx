@@ -13,6 +13,7 @@ const InfoBox = ({ img, text }: InfoBox) => {
         src={img}
         alt={text}
         className='w-[20px] md:w-[30px] lg:w-auto mx-3'
+        priority
       />
       <p className='text-[var(--text-white-1)] text-xs lg:text-base ml-2 font-semibold tracking-wider '>
         {text}
