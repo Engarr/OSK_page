@@ -1,9 +1,7 @@
-'use client';
 import React from 'react';
 import Image from 'next/image';
 import backgroundImage from '@/public/images/welcome_background/welcome_background_img.jpg';
 import woman from '@/public/images/welcome_background/woman.png';
-import { motion } from 'framer-motion';
 
 const BackgroundImage = () => {
   return (
@@ -18,13 +16,12 @@ const BackgroundImage = () => {
         sizes='100vh'
         className='z-[-3] object-cover'
       />
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-        <Image
-          src={woman}
-          alt='zdjęcie kobiety'
-          quality={100}
-          priority
-          className='
+      <Image
+        src={woman}
+        alt='zdjęcie kobiety'
+        quality={100}
+        priority
+        className='
         w-[450px] right-[-35%] bottom-0
         s:w-[550px]
         md:right-[-10%] md:w-[550px]
@@ -32,8 +29,7 @@ const BackgroundImage = () => {
         xl:w-[550px] xl:right-[15%] 
         2xl:right-[20%] 
         absolute z-[-2]'
-        />
-      </motion.div>
+      />
     </div>
   );
 };

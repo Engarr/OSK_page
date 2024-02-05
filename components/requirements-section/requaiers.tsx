@@ -6,10 +6,11 @@ import car_2 from '@/public/images/car_2.png';
 import logo_2 from '@/public/images/logo_2.png';
 import small_logo_2 from '@/public/images/small_logo_2.png';
 import Image from 'next/image';
+import WhatNext from './what-next/what-next';
 
-const NextStepSection = () => {
+const Requirements = () => {
   return (
-    <section className='relative h-[100vh]'>
+    <section className='relative items-center flex flex-col overflow-hidden'>
       <BackgroundImage />
 
       <div className='absolute lg:left-[5%] xl:left-[15%] lg:top-[35%] xl:top-[45%] 2xl:top-[35%] md:w-[350px] lg:w-[450px] xl:w-[550px] 2xl:w-[750px] hidden lg:inline-block z-[10]'>
@@ -26,12 +27,12 @@ const NextStepSection = () => {
         alt='samochód'
         className='absolute h-[150px] w-[276px] lg:h-[250px] lg:w-[376px] top-[0%] right-[0%] opacity-50 lg:opacity-100'
       />
-      <div className='relative'>
-        <HowToStart />
-        <Needs />
-      </div>
+
+      <HowToStart />
+      <Needs />
+      <WhatNext />
     </section>
   );
 };
 
-export default NextStepSection;
+export default Requirements;

@@ -26,9 +26,12 @@ const HowToStart = () => {
   return (
     <motion.div
       ref={ref}
-      className='z-[10] flex flex-col items-center absolute top-[2.375rem] w-full 
-    md:max-w-[24rem] md:left-[10%] md:items-start 
-    xl:max-w-[34rem] xl:left-[15%]  xl:top-[4.375rem]'
+      className='z-40 relative flex flex-col items-center
+      top-[10px] w-full p-2
+      md:right-[15%] md:max-w-[24rem]      
+      lg:top-[20px] lg:right-[20%] lg:p-10 
+      xl:max-w-[34rem] xl:right-[20%]
+      '
       variants={motionVariants}
       initial='initial'
       animate={isInView ? 'visible' : 'initial'}>
@@ -52,3 +55,4 @@ const HowToStart = () => {
 };
 
 export default HowToStart;
+

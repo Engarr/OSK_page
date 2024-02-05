@@ -43,10 +43,13 @@ const Needs = () => {
   const isRequirementsInView = useInView(ref, { once: true, amount: 0.5 });
 
   return (
-    <div className='z-[10] absolute mt-[210px] md:mt-[250px] md:right-[30%] md:translate-x-1/2 md:max-w-[35rem] w-full overflow-hidden'>
+    <div
+      className='z-[10] p-2 mt-5 relative w-full
+      lg:px-5 lg:max-w-[38rem] lg:right-[-20%]
+    '>
       <motion.h3
         ref={ref}
-        className='font-bold text-[var(--main-page-color)] text-base md:text-xl xl:text-3xl px-2 mb-1 xl:mb-3 text-center md:text-start'
+        className='font-bold text-[var(--main-page-color)] text-base md:text-xl xl:text-3xl px-2 mb-1 xl:mb-3 text-center md:text-start '
         variants={titleVariant}
         initial='initial'
         animate={isTitleInView ? 'visible' : 'initial'}>
@@ -65,7 +68,7 @@ const Needs = () => {
               <Image src={r.img} alt='Zdjęcie wymagania' className='mr-2' />
               <p className=' text-xs md:text-sm xl:text-base'>{r.text}</p>
             </div>
-            <div className=' md:block w-[100%] xl:w-[120%] relative  bg-[var(--line-color)] h-[1px] mt-1 lg:mt-4' />
+            <div className='md:block w-[100%] relative  bg-[var(--line-color)] h-[1px] mt-1 lg:mt-4' />
           </motion.div>
         ))}
       </div>
