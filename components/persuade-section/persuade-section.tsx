@@ -1,7 +1,8 @@
 import React from 'react';
 import WhyUs from './why-us/why-us';
-import Video from './video/video';
 import Opinions from './opinions/opinions';
+
+const Video = React.lazy(() => import('./video/video'));
 
 const PersuadeSection = () => {
   return (

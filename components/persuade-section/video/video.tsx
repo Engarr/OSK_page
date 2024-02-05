@@ -1,5 +1,5 @@
 'use client';
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 const motionVariants = {
@@ -10,6 +10,7 @@ const motionVariants = {
     opacity: 1,
   },
 };
+
 
 const Video = () => {
   const ref = useRef(null);
