@@ -11,7 +11,6 @@ const motionVariants = {
   },
 };
 
-
 const Video = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
@@ -19,15 +18,14 @@ const Video = () => {
   return (
     <motion.div
       ref={ref}
-      className='w-full h-[400px]'
+      className='h-[300px] lg:h-[400px] w-[100%] lg:w-[50%] p-1 lg:p-0'
       variants={motionVariants}
       initial='initial'
       animate={isInView ? 'visible' : 'initial'}>
       <div
-        className=' w-full h-[80%] relative p-1
-      md:w-[80%]  md:-translate-x-1/2 md:left-[50%] md:mt-5
-      lg:w-[50%]
-      xl:h-[100%] xl:left-[65%] xl:top-[-10%] xl:w-[45%] '>
+        className='w-full h-[100%] relative 
+         lg:w-[100%]
+         xl:w-[100%]  aspect-video'>
         <iframe
           width='100%'
           height='100%'

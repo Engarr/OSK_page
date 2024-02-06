@@ -54,3 +54,70 @@ export const dummyOpinions = [
   { img: trophy, text: 'Nasza pozycja ', text_2: '3/52' },
   { img: licence, text: 'Zdawalność za 1 razem', text_2: '80%' },
 ] as const;
+export const reviews = [
+  {
+    author_name: 'Laura Majda',
+    author_url:
+      'https://www.google.com/maps/contrib/116087803316080748900/reviews',
+    language: 'pl',
+    original_language: 'pl',
+    profile_photo_url:
+      'https://lh3.googleusercontent.com/a/ACg8ocKWH9nReZQXwWPZ4kGiZf01uUUT_uzBdHpaCkXFCP6e=s128-c0x00000000-cc-rp-mo',
+    rating: 5,
+    text: 'Bardzo dobra szkoła nauki jazdy. Zarówno wykłady, jak i jazdy przebiegały w bardzo przyjaznej atmosferze. Instruktorzy dokładnie tłumaczyli błędy. Na plus jest możliwość wjechania na plac WORDu i dodatkowe godziny jazdy. Polecam',
+    time: 1706863859,
+    translated: false,
+  },
+  {
+    author_name: 'Eliza Zakorczmenna',
+    author_url:
+      'https://www.google.com/maps/contrib/103700186552886283402/reviews',
+    language: 'pl',
+    original_language: 'pl',
+    profile_photo_url:
+      'https://lh3.googleusercontent.com/a/ACg8ocJDhvQsnfcNdesqrFzKJjgva9KKkR9YPQ6WjH_ISCjb=s128-c0x00000000-cc-rp-mo',
+    rating: 5,
+    text: 'Polecam wszystkim. Dobra cena, sprawnie przeprowadzone wykłady ale przede wszystkim świetne podejście instruktorów do kursanta. Jazdy w profesjonalnej ale bardzo przyjemnej atmosferze, na które przychodziłam z przyjemnością.',
+    time: 1706703750,
+    translated: false,
+  },
+  {
+    author_name: 'Monika Fidler',
+    author_url:
+      'https://www.google.com/maps/contrib/108898905235469434665/reviews',
+    language: 'pl',
+    original_language: 'pl',
+    profile_photo_url:
+      'https://lh3.googleusercontent.com/a/ACg8ocLYrXAGMbOOOBdSJgimuL9QI9Nf2KXzKrxRf2EvgSoa=s128-c0x00000000-cc-rp-mo',
+    rating: 5,
+    text: 'Super szkoła, istruktorzy bardzo mili i cierpliwi, świetnie przygotowują do egzaminu. Na jazdach i wykładach panuje przyjemna atmosfera, wszystko jest świetnie dopracowane. Bardzo polecam',
+    time: 1705965352,
+    translated: false,
+  },
+  {
+    author_name: 'Paweł Dziedzic',
+    author_url:
+      'https://www.google.com/maps/contrib/106285440565012889387/reviews',
+    language: 'pl',
+    original_language: 'pl',
+    profile_photo_url:
+      'https://lh3.googleusercontent.com/a-/ALV-UjW3aqE1GHgAUjIEcwKPWq1BWVTS2Z73zqn1Peb78U4dVrA=s128-c0x00000000-cc-rp-mo',
+    rating: 5,
+    text: 'Najlepsza szkoła nauki jazdy w Rzeszowie, profesjonalne podejście do kursanta pod każdym aspektem, świetnie pokazane wszystkie cięższe miejsca, trasy egzaminacyjne oraz w bardzo przyjemny sposób wytłumaczone.\n\nEgzaminy ma WORD zdane za pierwszym podejściem.\nPolecam serdecznie z całego serca❤️',
+    time: 1699379033,
+    translated: false,
+  },
+  {
+    author_name: 'Natalia',
+    author_url:
+      'https://www.google.com/maps/contrib/109425683364360051555/reviews',
+    language: 'pl',
+    original_language: 'pl',
+    profile_photo_url:
+      'https://lh3.googleusercontent.com/a-/ALV-UjXruZQDfqUikjGxicFzNEwdwHdgv3KB5sObJFxwo4SuXw=s128-c0x00000000-cc-rp-mo',
+    rating: 5,
+    text: 'Zdecydowanie polecam!!! Instruktorzy profesjonalni i cierpliwi, a zajęcia praktyczne i teoretyczne doskonale przygotowują do egzaminu. Świetne podejście i bardzo przyjazna atmosfera na jazdach. Gdybym cofnęła się w czasie podjęłabym tą samą decyzję i znów wybrałabym właśnie Neocar :DDD',
+    time: 1705592404,
+    translated: false,
+  },
+] as const;

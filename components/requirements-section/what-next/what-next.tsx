@@ -24,12 +24,12 @@ const WhatNext = () => {
   return (
     <motion.div
       className='z-[10] p-2 mt-5 relative w-full
-    lg:px-5 lg:max-w-[38rem] lg:right-[-20%]'
+    lg:px-5 lg:max-w-[38rem] '
       ref={ref}
       variants={motionVariants}
       initial='initial'
       animate={isInView ? 'visible' : 'initial'}>
-      <div className='flexCenter mb-1 xl:mb-3 relative w-full'>
+      <div className='flex justify-center lg:justify-start  items-center mb-1 xl:mb-3 relative w-full'>
         <h3 className='font-bold text-[var(--main-page-color)] text-base md:text-xl xl:text-3xl '>
           Co dalej...
         </h3>

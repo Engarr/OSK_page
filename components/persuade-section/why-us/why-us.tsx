@@ -25,15 +25,13 @@ const WhyUs = () => {
   return (
     <motion.div
       ref={ref}
-      className='z-40 relative flex flex-col items-center
-       w-full p-2 left-0
-      xl:max-w-[34rem] xl:left-[10%]
-      
+      className='
+      lg:max-w-[34rem]  
       '
       variants={motionVariants}
       initial='initial'
       animate={isInView ? 'visible' : 'initial'}>
-      <div className='flexCenter mb-1 xl:mb-3 relative'>
+      <div className='flex justify-center lg:justify-start  items-center mb-1 xl:mb-3 relative'>
         <h3 className='font-bold text-[var(--main-page-color)] text-base md:text-xl xl:text-3xl '>
           Dlaczego my?
         </h3>
@@ -47,9 +45,12 @@ const WhyUs = () => {
         nauki, za który płaci nasz Klient. W naszych rękach możesz czuć się
         bezpiecznie
       </p>
-      
     </motion.div>
   );
 };
 
 export default WhyUs;
+
+// z-40 relative flex flex-col items-center
+//        w-full p-2 left-0
+//       xl:max-w-[34rem] xl:left-[10%]

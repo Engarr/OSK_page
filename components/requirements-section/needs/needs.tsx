@@ -44,12 +44,12 @@ const Needs = () => {
 
   return (
     <div
-      className='z-[10] p-2 mt-5 relative w-full
-      lg:px-5 lg:max-w-[38rem] lg:right-[-20%]
+      className='z-[10] p-2 mt-5 relative w-full flex flex-col items-center
+      lg:px-5 lg:max-w-[38rem] top-[10px] lg:items-start
     '>
       <motion.h3
         ref={ref}
-        className='font-bold text-[var(--main-page-color)] text-base md:text-xl xl:text-3xl px-2 mb-1 xl:mb-3 text-center md:text-start '
+        className='font-bold text-[var(--main-page-color)] text-base md:text-xl xl:text-3xl  mb-1 xl:mb-3 text-center md:text-start '
         variants={titleVariant}
         initial='initial'
         animate={isTitleInView ? 'visible' : 'initial'}>

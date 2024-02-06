@@ -5,7 +5,7 @@ import woman from '@/public/images/welcome_background/woman.png';
 
 const BackgroundImage = () => {
   return (
-    <div className='h-[calc(100vh-82px)]'>
+    <div className='h-[calc(100vh-82px)] relative'>
       <Image
         src={backgroundImage}
         alt='background'
@@ -14,7 +14,7 @@ const BackgroundImage = () => {
         priority
         fill
         sizes='100vh'
-        className='z-[-3] object-cover'
+        className='z-[-3] object-cover fixed'
       />
       <Image
         src={woman}

@@ -6,23 +6,29 @@ import backgroundMobileImage from '@/public/images/next_step_background_phone.jp
 
 const BackgroundImage = () => {
   return (
-    <div className='absolute top-0 bg-[var(--white-80)] w-full h-[10vh] lg:h-[1105px]'>
+    <div className='absolute top-0 bg-[var(--white-80)] w-full h-full'>
       <Image
         src={backgroundImage}
         alt='bg-next-setp'
         fill
+        quality={80}
+        sizes='100vh'
         className='object-cover z-[-10] opacity-50 hidden xl:inline '
       />
       <Image
         src={backgroundTabletImage}
         alt='bg-next-setp'
         fill
+        quality={80}
+        sizes='100vh'
         className='object-cover z-[-10] opacity-50 hidden md:inline xl:hidden '
       />
       <Image
         src={backgroundMobileImage}
         alt='bg-next-setp'
         fill
+        quality={80}
+        sizes='100vh'
         className='object-cover z-[-10] opacity-50 inline md:hidden'
       />
     </div>

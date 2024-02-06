@@ -48,16 +48,18 @@ const Steps = () => {
               {step.number}
             </p>
           </div>
-          <p className='text-sm lg:font-semibold lg:text-lg flexCenter'>
+          <p className='text-sm lg:font-semibold lg:text-lg flexCenter flex-col'>
             {step.text}{' '}
             {step.icon && typeof step.icon !== 'string' && (
-              <Image
-                src={step.icon}
-                alt={`Step ${step.number} icon`}
-                width={50}
-                height={50}
-                className='ml-2'
-              />
+              <span className='w-[50px] h-[50px] relative'>
+                <Image
+                  src={step.icon}
+                  alt={`Step ${step.number} icon`}
+                  fill
+                  sizes='100vh'
+                  className='ml-2'
+                />
+              </span>
             )}
           </p>
         </motion.div>

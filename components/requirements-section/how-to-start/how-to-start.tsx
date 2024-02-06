@@ -28,9 +28,9 @@ const HowToStart = () => {
       ref={ref}
       className='z-40 relative flex flex-col items-center
       top-[10px] w-full p-2
-      md:right-[15%] md:max-w-[24rem]      
-      lg:top-[20px] lg:right-[20%] lg:p-10 
-      xl:max-w-[34rem] xl:right-[20%]
+       md:max-w-[24rem]      
+      lg:top-[20px] lg:items-start  
+      xl:max-w-[34rem] 
       '
       variants={motionVariants}
       initial='initial'
@@ -55,4 +55,3 @@ const HowToStart = () => {
 };
 
 export default HowToStart;
-
