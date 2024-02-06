@@ -7,21 +7,12 @@ import logo_2 from '@/public/images/logo_2.png';
 import small_logo_2 from '@/public/images/small_logo_2.png';
 import Image from 'next/image';
 import WhatNext from './what-next/what-next';
+import Wrapper from '../ui/wrapper';
 
 const Requirements = () => {
   return (
-    <section className='relative items-center flex flex-col overflow-hidden py-10'>
+    <section className='relative items-center flex flex-col overflow-hidden py-10 '>
       <BackgroundImage />
-
-      <div
-        className='absolute hidden
-      md:w-[350px]
-      lg:left-[2%] lg:top-[35%] lg:w-[450px] lg:inline-block
-      xl:left-[10%] xl:top-[40%] xl:w-[550px] 
-      2xl:w-[700px] 2xl:top-[35%] 2xl:left-[12%]
-      xxxl:w-[750px] z-[10]'>
-        <Image src={car_2} alt='samochód' loading='lazy' />
-      </div>
 
       <Image
         src={logo_2}
@@ -35,13 +26,22 @@ const Requirements = () => {
         className='absolute h-[150px] w-[276px] lg:h-[250px] lg:w-[376px] top-[0%] right-[0%] opacity-50 lg:opacity-100'
         loading='lazy'
       />
-      <div className='flex flex-col lg:flex-row lg:mt-[50px] items-center lg:items-start'>
-        <HowToStart />
-        <div>
+      <Wrapper style='lg:mt-[50px] flex-col lg:flex-row items-center lg:items-start '>
+        <div className='relative flex items-center flex-col-reverse'>
+          <Image
+            src={car_2}
+            alt='samochód'
+            loading='lazy'
+            className='hidden lg:inline-block'
+          />
+          <HowToStart />
+        </div>
+
+        <div className=' w-full md:max-w-[34rem] xl:max-w-[38rem] '>
           <Needs />
           <WhatNext />
         </div>
-      </div>
+      </Wrapper>
     </section>
   );
 };

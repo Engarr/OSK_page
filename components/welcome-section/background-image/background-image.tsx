@@ -1,11 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 import backgroundImage from '@/public/images/welcome_background/welcome_background_img.jpg';
-import woman from '@/public/images/welcome_background/woman.png';
 
 const BackgroundImage = () => {
   return (
-    <div className='h-[calc(100vh-82px)] relative'>
+    <div className='h-[calc(100vh-82px)] absolute top-0 right-0 w-full'>
       <Image
         src={backgroundImage}
         alt='background'
@@ -15,20 +14,6 @@ const BackgroundImage = () => {
         fill
         sizes='100vh'
         className='z-[-3] object-cover fixed'
-      />
-      <Image
-        src={woman}
-        alt='zdjęcie kobiety'
-        quality={80}
-        priority
-        className='
-        w-[450px] right-[-35%] bottom-0
-        s:w-[550px]
-        md:right-[-10%] md:w-[550px]
-        lg:w-[500px] lg:right-[-5%] 
-        xl:w-[550px] xl:right-[15%] 
-        2xl:right-[20%] 
-        absolute z-[-2]'
       />
     </div>
   );

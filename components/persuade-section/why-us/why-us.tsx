@@ -51,6 +51,3 @@ const WhyUs = () => {
 
 export default WhyUs;
 
-// z-40 relative flex flex-col items-center
-//        w-full p-2 left-0
-//       xl:max-w-[34rem] xl:left-[10%]

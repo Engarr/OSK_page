@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 type BtnType = {
   text: string;
   style?: string;
+  link?: string;
 };
 
 const btnAnimation = {
@@ -20,7 +21,7 @@ const btnAnimation = {
   },
 };
 
-const Btn = ({ text, style }: BtnType) => {
+const Btn = ({ text, style, link }: BtnType) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.5, once: true });
 
@@ -37,7 +38,13 @@ const Btn = ({ text, style }: BtnType) => {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       transition={{ type: 'spring', stiffness: 300 }}>
-      {text}
+      {!link ? (
+        text
+      ) : (
+        <a href={link} target='_blank' rel='noopener noreferrer'>
+          {text}
+        </a>
+      )}
     </motion.button>
   );
 };

@@ -6,10 +6,12 @@ import AnimateText from '@/components/ui/animate-text';
 import { motion } from 'framer-motion';
 
 const PlanCard = () => {
+  const animateTextStyle =
+    'text-2xl lg:text-3xl lg:text-4xl font-extrabold pr-1 mt-1 lg:pr-2 lg:mt-2';
   return (
     <div className='flexCenter relative'>
       <motion.div
-        className='hiden absolute h-full  md:right-[156px] md:top-[-112px] md:w-[315px] md:h-[358px] lg:right-[164px] lg:top-[-132px] lg:w-[404px] lg:h-[446px]'
+        className='hiden absolute h-full md:right-[156px] md:top-[-112px] md:w-[315px] md:h-[358px] lg:right-[164px] lg:top-[-132px] lg:w-[404px] lg:h-[446px] z-0'
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ type: 'spring', stiffness: 100, delay: 0.5 }}>
@@ -21,14 +23,8 @@ const PlanCard = () => {
         </motion.p>
 
         <div className='flex items-end'>
-          <AnimateText
-            style=' text-2xl lg:text-3xl lg:text-4xl font-extrabold pr-1 mt-1 lg:pr-2 lg:mt-2'
-            text='2590'
-          />
-          <AnimateText
-            style='text-base lg:text-xl lg:text-xl font-extrabold pr-1 mt-1 lg:pr-2 lg:mt-2'
-            text='PLN'
-          />
+          <AnimateText style={animateTextStyle} text='2590' />
+          <AnimateText style={animateTextStyle} text='PLN' />
         </div>
 
         <motion.div

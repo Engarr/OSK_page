@@ -36,5 +36,4 @@ const BackgroundImage = () => {
 };
 
 export default BackgroundImage;
-// h-[568px] lg:h-[1105px]
-//hidden xl:inline
+

@@ -23,8 +23,8 @@ const WhatNext = () => {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
   return (
     <motion.div
-      className='z-[10] p-2 mt-5 relative w-full
-    lg:px-5 lg:max-w-[38rem] '
+      className='z-[10]  mt-5 relative w-full
+    lg:px-5  '
       ref={ref}
       variants={motionVariants}
       initial='initial'

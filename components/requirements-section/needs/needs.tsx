@@ -45,7 +45,7 @@ const Needs = () => {
   return (
     <div
       className='z-[10] p-2 mt-5 relative w-full flex flex-col items-center
-      lg:px-5 lg:max-w-[38rem] top-[10px] lg:items-start
+      lg:px-5 top-[10px] lg:items-start
     '>
       <motion.h3
         ref={ref}

@@ -4,7 +4,7 @@ import PersuadeSection from '@/components/persuade-section/persuade-section';
 
 export default function Home() {
   return (
-    <main className='h-[10000px]'>
+    <main className='h-[10000px] '>
       <WelcomeSection />
       <div className='relative'>
         <div className='w-full h-[32px]  bottom-0 gradient-background absolute ' />

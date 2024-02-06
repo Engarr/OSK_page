@@ -18,7 +18,7 @@ const Video = () => {
   return (
     <motion.div
       ref={ref}
-      className='h-[300px] lg:h-[400px] w-[100%] lg:w-[50%] p-1 lg:p-0'
+      className=' max-w-[100%] lg:h-[400px] w-[100%] lg:w-[50%] p-1 lg:p-0'
       variants={motionVariants}
       initial='initial'
       animate={isInView ? 'visible' : 'initial'}>

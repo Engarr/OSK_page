@@ -66,7 +66,10 @@ const Opinions = () => {
 
   return (
     <>
-      <div className='relative  mt-10  w-full  justify-start items-center flex b'>
+      <motion.div
+        className='relative  mt-10  w-full  justify-start items-center flex b'
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}>
         <div
           className={cn(
             ' hidden lg:inline-block absolute left-[5%] xl:left-[10%] text-[40px] text-[var(--main-page-color)] cursor-pointer z-40 ',
@@ -102,7 +105,7 @@ const Opinions = () => {
           onClick={onIncreaseReviws}>
           <IoIosArrowForward />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
@@ -142,7 +145,16 @@ const ReviewCard = ({ setWidth }: ReviewCardType) => {
                   </p>
                 </div>
               </div>
-              <p className='text-xs p-2'>{r.text}</p>
+              <div className='text-xs p-2'>
+                <p className='mb-1'>{r.text}</p>
+                <a
+                  href='https://www.google.com/search?sca_esv=e1cf12f9f09085f6&hl=pl&gl=PL&sxsrf=ACQVn08gJ6w0fgjPRW0l6IeGEAshVHkQYQ:1707232879198&q=neocar+opinie&uds=AMwkrPs-xwNlCptylbkNGKuEXSF74ptdfslb1nS7FjCSX08jSCGbhJbkayiRiq8ryGt5slyWPeEUVOsofiBnVed54f8RUGj8ySAkJYoxpqJnB5HN9Qv17vo9vpl0aNPov0i4L7pb7zMB9NCbp5hrx14drpQ-f_toUYdqpzBckaG8NW9xzsl0RLg&si=AKbGX_rcuucMgom2rba1cdwsvM2SVoIkP2btyqGMV4t0GuHIs4sGV_1tpuqR0YHG4Rzd9SdIuPYoXMFi13tIRJ_4YelZhn2WHj6uPjtAizJKTuRotPx_NxJjf_FDn9H0aJ6I_R3EMwMJHGbS7n_tqx35ogscYDRVEQ%3D%3D&sa=X&ved=2ahUKEwjGwcCKgpeEAxXQavEDHZ2QCyAQxKsJegQIChAB&ictx=1&biw=1920&bih=919&dpr=1'
+                  className='text-[var(--main-page-color)] mt-2'
+                  target='_blank'
+                  rel='noopener noreferrer'>
+                  Więcej...
+                </a>
+              </div>
             </div>
           </div>
         );

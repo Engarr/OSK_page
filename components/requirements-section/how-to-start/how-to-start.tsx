@@ -26,11 +26,11 @@ const HowToStart = () => {
   return (
     <motion.div
       ref={ref}
-      className='z-40 relative flex flex-col items-center
+      className='z-20 relative flex flex-col items-center
       top-[10px] w-full p-2
-       md:max-w-[24rem]      
+       md:max-w-[34rem]      
       lg:top-[20px] lg:items-start  
-      xl:max-w-[34rem] 
+      xl:max-w-[38rem] 
       '
       variants={motionVariants}
       initial='initial'
