@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils';
 type ReviewCardType = {
   setWidth: React.Dispatch<React.SetStateAction<number | undefined>>;
 };
-const DRAG_BUFFER = 50;
+const DRAG_BUFFER = 30;
 const PC_CARDS_TO_SCROLL = 2;
 const TABLET_CARDS_TO_SCROLL = 1;
 const MOBILE_CARDS_TO_SCROLL = 0;
@@ -75,7 +75,7 @@ const Opinions = () => {
           onClick={onDecreaseeReviws}>
           <IoIosArrowBack />
         </div>
-        <div className=' relative w-full lg:w-3/4 overflow-hidden left-1/2 -translate-x-1/2 flex '>
+        <div className=' relative w-full lg:w-3/4 overflow-hidden left-1/2 -translate-x-1/2 flex'>
           <motion.div
             className='flex cursor-grab active:cursor-grabbing '
             drag='x'
@@ -124,9 +124,9 @@ const ReviewCard = ({ setWidth }: ReviewCardType) => {
         return (
           <div
             key={index}
-            className={`aspect-video shrink-0 w-1/2 xl:w-1/3  py-4 rounded-md flex items-center justify-center`}
+            className={`aspect-video shrink-0 w-1/2 xl:w-1/3  py-4 rounded-md flex items-center lg:justify-start justify-center`}
             ref={reviewCardRef}>
-            <div className='w-[90%] relative lg:left-1/2 lg:-translate-x-1/2 lg:h-[200px] h-[250px] bg-[var(--background-white-2)] px-2  py-4 rounded-md justify-center flex flex-col'>
+            <div className='w-[90%] relative lg:left-1/2 lg:-translate-x-1/2 lg:h-[200px] h-[250px] bg-[var(--background-white-2)] px-2 py-4 rounded-md justify-center flex flex-col'>
               <div className='flex items-center gap-2 mb-2 '>
                 <Image
                   src={r.profile_photo_url}
