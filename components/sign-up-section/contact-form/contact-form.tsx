@@ -57,7 +57,7 @@ const ContactForm = () => {
         control={control}
         defaultValue=''
         render={({ field }) => (
-          <Input field={field} type='text' placeholder='Phone number' />
+          <Input field={field} type='text' placeholder='Twoj numer telefonu' />
         )}
       />
 
