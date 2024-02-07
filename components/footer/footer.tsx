@@ -69,6 +69,16 @@ const Footer = () => {
           </div>
         </div>
       </Wrapper>
+      <p className='text-center text-xs mt-2'>
+        Strona wykonana przez firmę Modezp -
+        <a
+          href='https://www.modezp.com/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='pl-1 hover:text-[var(--main-page-color)] transition-colors'>
+          www.modezp.com
+        </a>
+      </p>
     </footer>
   );
 };
