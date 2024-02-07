@@ -5,12 +5,12 @@ import Image from 'next/image';
 import logo from '@/public/images/logo_PNG.png';
 import AnimateText from '@/components/ui/animate-text';
 import { motion } from 'framer-motion';
-import Btn from '@/components/ui/btn';
 import PlanCard from '../plan-card/plan-card';
+import NavigateBtn from '@/components/ui/navigate-btn';
 
 const Title = () => {
   return (
-    <div className=' flex flex-col items-center py-2 '>
+    <div className=' flex flex-col items-center py-2'>
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         <Image src={logo} alt='logo' className='' width={500} priority />
       </motion.div>
@@ -20,9 +20,11 @@ const Title = () => {
         <AnimateText text='Szkolenia' style=' pr-2 xl:pr-4' />
         <AnimateText text='Kierowców' />
       </h1>
-      <Btn
+
+      <NavigateBtn
         text='Zapisz się już dziś!'
-        style='text-base md:text-xl w-[18rem] h-[3.8rem]  md:w-[19rem] md:h-[4.6rem] z-[30] mt-4'
+        link='/#signup'
+        style='text-base md:text-xl w-[18rem] h-[3.8rem]  md:w-[19rem] md:h-[4.6rem] z-[30] mt-4 z-20'
       />
       <PlanCard />
     </div>

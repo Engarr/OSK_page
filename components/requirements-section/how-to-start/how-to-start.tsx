@@ -2,8 +2,9 @@
 
 import whyQuest from '@/public/images/Why_Quest.png';
 import Image from 'next/image';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
+
+import { cn } from '@/lib/utils';
 
 const motionVariants = {
   initial: {
@@ -19,13 +20,20 @@ const motionVariants = {
     },
   },
 };
+const btnAnimation = {
+  hidden: {
+    opacity: 0,
+    y: -20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 const HowToStart = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
   return (
     <motion.div
-      ref={ref}
       className='z-20 relative flex flex-col items-center
       top-[10px] w-full p-2
        md:max-w-[34rem]      
@@ -34,7 +42,7 @@ const HowToStart = () => {
       '
       variants={motionVariants}
       initial='initial'
-      animate={isInView ? 'visible' : 'initial'}>
+      whileInView='visible'>
       <div className='flexCenter mb-1 xl:mb-3 relative'>
         <h3 className='font-bold text-[var(--main-page-color)] text-base md:text-xl xl:text-3xl '>
           Jak zacząć
@@ -46,12 +54,43 @@ const HowToStart = () => {
         />
       </div>
       <p className='tracking-wider p-2 md:p-0 text-xs md:text-sm xl:text-base'>
-        Pierwszym krokiem jest uzyskanie Profilu Kandydata na Kierowcę (PKK) w
-        wydziale komunikacji swojego urzędu. Niepełnolenia osoba wymaga
-        obecności rodzica/opiekuna lub pisemnej zgody
+        Profil Kandydata na Kierowcę czyli numer PKK trzeba wyrobić w wydziale
+        komunikacji ze względu na zameldowanie. Do wyrobienia numeru PKK
+        potrzebne są badania lekarskie, zdjęcie profil przód, dokument
+        tożsamości (dowód osobisty lub paszport), dodatkowo zgoda rodzica jeżeli
+        jest się osobą nie pełnoletnią
       </p>
+      <div className='flexCenter  gap-2 mt-4'>
+        <DocuementBtn text='Pobierz wniosek PKK' />
+        <DocuementBtn
+          text='Zgoda rodzica'
+          style='bg-transparent text-[var(--main-page-color)] border-solid border-2 border-[var(--main-page-color)]'
+        />
+      </div>
     </motion.div>
   );
 };
 
 export default HowToStart;
+
+type DocuementBtn = {
+  text: string;
+  style?: string;
+};
+
+const DocuementBtn = ({ text, style }: DocuementBtn) => {
+  return (
+    <motion.button
+      variants={btnAnimation}
+      whileInView='visible'
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ type: 'spring', stiffness: 300 }}
+      className={cn(
+        'bg-[var(--main-page-color)] rounded-md shadow-2xl text-[var(--text-white-1)] font-bold tracking-wider px-2 py-3 ',
+        style
+      )}>
+      {text}
+    </motion.button>
+  );
+};

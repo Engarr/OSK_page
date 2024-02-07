@@ -57,7 +57,7 @@ const Steps = () => {
                   alt={`Step ${step.number} icon`}
                   fill
                   sizes='100vh'
-                  className='ml-2'
+                  className=''
                 />
               </span>
             )}

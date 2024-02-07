@@ -5,6 +5,7 @@ import { requirements } from '@/lib/data';
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import Btn from '@/components/ui/btn';
 
 const titleVariant = {
   initial: {
@@ -72,6 +73,7 @@ const Needs = () => {
           </motion.div>
         ))}
       </div>
+      
     </div>
   );
 };

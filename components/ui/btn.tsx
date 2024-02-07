@@ -8,6 +8,7 @@ type BtnType = {
   text: string;
   style?: string;
   link?: string;
+  linkConfig?: string;
 };
 
 const btnAnimation = {
@@ -26,26 +27,22 @@ const Btn = ({ text, style, link }: BtnType) => {
   const isInView = useInView(ref, { amount: 0.5, once: true });
 
   return (
-    <motion.button
-      className={cn(
-        'bg-[var(--main-page-color)] rounded-md shadow-2xl text-[var(--text-white-1)] font-bold tracking-wider ',
-        style
-      )}
-      ref={ref}
-      variants={btnAnimation}
-      initial='hidden'
-      animate={isInView ? 'visible' : 'hidden'}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      transition={{ type: 'spring', stiffness: 300 }}>
-      {!link ? (
-        text
-      ) : (
-        <a href={link} target='_blank' rel='noopener noreferrer'>
-          {text}
-        </a>
-      )}
-    </motion.button>
+    <a href={link} target='_blank' rel='noopener noreferrer'>
+      <motion.button
+        className={cn(
+          'bg-[var(--main-page-color)] rounded-md shadow-2xl text-[var(--text-white-1)] font-bold tracking-wider ',
+          style
+        )}
+        ref={ref}
+        variants={btnAnimation}
+        initial='hidden'
+        animate={isInView ? 'visible' : 'hidden'}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: 'spring', stiffness: 300 }}>
+        {text}
+      </motion.button>
+    </a>
   );
 };
 

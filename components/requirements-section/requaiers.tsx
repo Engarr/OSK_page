@@ -27,12 +27,12 @@ const Requirements = () => {
         loading='lazy'
       />
       <Wrapper style='lg:mt-[50px] flex-col lg:flex-row items-center lg:items-start '>
-        <div className='relative flex items-center flex-col-reverse'>
+        <div className='relative flex items-center justify-around flex-col-reverse '>
           <Image
             src={car_2}
             alt='samochód'
             loading='lazy'
-            className='hidden lg:inline-block'
+            className=' lg:inline-block m-2 lg:mt-[200px]'
           />
           <HowToStart />
         </div>

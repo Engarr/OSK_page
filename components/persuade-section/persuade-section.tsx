@@ -9,7 +9,7 @@ const Opinions = React.lazy(() => import('./opinions/opinions'));
 
 const PersuadeSection = () => {
   return (
-    <section className='relative overflow-hidden   '>
+    <section className='relative overflow-hidden pb-10 '>
       <Wrapper style='flex-col left-1/2 -translate-x-1/2  '>
         <Suspense fallback={<div>Pobieranie danych...</div>}>
           <div className='relative py-5 flex items-start justify-center gap-4 flex-col lg:flex-row lg:mb-10'>
