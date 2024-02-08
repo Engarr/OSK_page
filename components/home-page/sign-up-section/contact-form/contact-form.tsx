@@ -67,14 +67,14 @@ const ContactForm = () => {
           politykę prywatności.
         </Link>
       </p>
-      <div className='flex justify-center mt-5 '>
+      <div className='flex justify-center mt-2 '>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: 'spring', stiffness: 300 }}
           type='submit'
-          className='bg-[var(--main-page-color)] text-[var(--text-white-1)] px-2 py-3 rounded-md font-bold text-xs lg:text-lg'>
-          Zapisz się teraz
+          className='bg-[var(--main-page-color)] text-[var(--text-white-1)] px-2 py-3 rounded-md font-bold text-xs lg:text-base'>
+          Zapisz się na kurs
         </motion.button>
       </div>
     </form>
