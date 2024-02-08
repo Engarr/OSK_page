@@ -27,13 +27,13 @@ const infoData = [
 
 const Details = () => {
   return (
-    <div className='flex flex-col bg-[var(--white-50)] py-3 px-2 w-full xl:w-[90%] rounded-md mt-1 xl:mt-[2rem]'>
+    <div className='flex flex-col bg-[var(--white-50)] py-5 px-2 w-full xl:w-[90%] rounded-md mt-1 xl:mt-[2rem]'>
       <div className=' text-sm sm:text-base lg:text-lg xl:text-2xl flex items-center justify-center flex-col gap-2 mb-2 xl:mb-10 '>
         <p className='font-bold text-center lg:text-start'>
           !!! Promocja dla wszystkich uczniów - dodatkowe 2 godziny jazdy gratis
           !!!
         </p>
-        <div className='h-[2px] w-[100%] bg-[var(--main-page-color)]' />
+        <div className='h-[2px] w-[60%] bg-[var(--main-page-color-40)]' />
       </div>
       <div className='flex justify-around gap-1 md:gap-5 xl:gap-10 flex-col lg:flex-row '>
         {infoData.map((item, index) => (

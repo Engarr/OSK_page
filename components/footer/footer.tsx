@@ -75,7 +75,7 @@ const Footer = () => {
           href='https://www.modezp.com/'
           target='_blank'
           rel='noopener noreferrer'
-          className='pl-1 hover:text-[var(--main-page-color)] transition-colors'>
+          className='pl-1 hover:text-[var(--main-page-color)] transition-colors text-blue-400'>
           www.modezp.com
         </a>
       </p>

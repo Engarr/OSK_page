@@ -39,6 +39,7 @@ const Navigation = () => {
               {navLinks.map((link) => (
                 <motion.li
                   key={link.name}
+                  onClick={() => setIsMenuVisible(false)}
                   className={cn(
                     'text-xl lg:text-base text-[var(--text-white-1)] hover:text-[var(--main-page-color)] transition-colors',
                     {
