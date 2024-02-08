@@ -7,9 +7,10 @@ import MenuToggleButton from '../menu-toggle-button/menu-toggle-button';
 import Socialmedia from './socialmedia';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { usePathname } from 'next/navigation';
 
 const Navigation = () => {
-  const activeSection = 'OSKNEOCAR';
+  const url = usePathname();
   const [isMenuVisible, setIsMenuVisible] = useState(false);
 
   return (
@@ -38,14 +39,13 @@ const Navigation = () => {
               {navLinks.map((link) => (
                 <motion.li
                   key={link.name}
-                  className={`text-xl lg:text-base ${
-                    activeSection !== link.name
-                      ? 'text-[var(--text-white-1)] '
-                      : 'text-[var(--main-page-color)] font-semibold'
-                  }`}
-                  whileHover={{
-                    color: 'var(--main-page-color)',
-                  }}
+                  className={cn(
+                    'text-xl lg:text-base text-[var(--text-white-1)] hover:text-[var(--main-page-color)] transition-colors',
+                    {
+                      ' font-bold text-[var(--main-page-color)]':
+                        link.adress === url,
+                    }
+                  )}
                   transition={{ type: 'spring', stiffness: 100 }}>
                   <Link href={link.adress}>{link.name}</Link>
                 </motion.li>

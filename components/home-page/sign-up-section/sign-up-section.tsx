@@ -1,8 +1,8 @@
 import React from 'react';
-import Wrapper from '../ui/wrapper';
+import Wrapper from '../../ui/wrapper';
 import ContactForm from './contact-form/contact-form';
 import Offer from './offer/offer';
-import NavigateBtn from '../ui/navigate-btn';
+import NavigateBtn from '../../ui/navigate-btn';
 import Image from 'next/image';
 import signupBackgroundImg from '@/public/images/408908176_18004249550233455_9060350178127088714_n 1.jpg';
 import signupBackgroundImgMobile from '@/public/images/408908176_18004249550233455_9060350178127088714_n 1_mobile.jpg';

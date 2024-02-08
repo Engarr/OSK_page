@@ -39,7 +39,7 @@ const NavigateBtn = ({ text, style, link }: SignUpBtnType) => {
       <Link
         href={link}
         className={cn(
-          'bg-[var(--main-page-color)] rounded-md shadow-2xl text-[var(--text-white-1)] font-bold tracking-wider flexCenter',
+          'bg-[var(--main-page-color)] rounded-md shadow-2xl text-[var(--text-white-1)] font-bold tracking-wider flexCenter px-2 py-3 ',
           style
         )}>
         {text}

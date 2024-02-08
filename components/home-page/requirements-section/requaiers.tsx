@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+
 import HowToStart from './how-to-start/how-to-start';
 import BackgroundImage from './background-image/background-image';
 import Needs from './needs/needs';
@@ -7,7 +8,8 @@ import logo_2 from '@/public/images/logo_2.png';
 import small_logo_2 from '@/public/images/small_logo_2.png';
 import Image from 'next/image';
 import WhatNext from './what-next/what-next';
-import Wrapper from '../ui/wrapper';
+import Wrapper from '../../ui/wrapper';
+import { motion } from 'framer-motion';
 
 const Requirements = () => {
   return (
@@ -27,7 +29,10 @@ const Requirements = () => {
         loading='lazy'
       />
       <Wrapper style='lg:mt-[50px] flex-col lg:flex-row items-center lg:items-start '>
-        <div className='relative flex items-center justify-around flex-col-reverse '>
+        <motion.div
+          className='relative flex items-center justify-around flex-col-reverse '
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}>
           <Image
             src={car_2}
             alt='samochód'
@@ -35,7 +40,7 @@ const Requirements = () => {
             className=' lg:inline-block m-2 lg:mt-[200px]'
           />
           <HowToStart />
-        </div>
+        </motion.div>
 
         <div className=' w-full md:max-w-[34rem] xl:max-w-[38rem] '>
           <Needs />

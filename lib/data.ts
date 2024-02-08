@@ -14,7 +14,7 @@ export const navLinks = [
   { name: 'OSKNEOCAR', adress: '/' },
   { name: 'Cennik', adress: '/cennik' },
   { name: 'Galeria', adress: '/galeria' },
-  { name: 'Kontakt', adress: '/#kontakt' },
+  { name: 'Kontakt', adress: '/kontakt' },
 ] as const;
 
 export const moreInfo = [
@@ -121,3 +121,56 @@ export const reviews = [
     translated: false,
   },
 ] as const;
+
+export const pricePlans = [
+  {
+    id: 'EKSTERNISTYCZNY',
+    title: 'Kurs podstawowoy kat. B',
+    planTitle: 'EKSTERNISTYCZNY',
+    price: '2590',
+
+    characteristic: [
+      '30h jazd praktycznych',
+      'zajęcia z ratownikiem medycznym',
+      'jazda po placu egzaminacyjnym WORD',
+      'zajęcia praktyczne na NOWYM samochodzie Hyundai i20 (dokładnie taki sam jak w WORD Rzeszów)',
+      'wszelkie niezbędne materiały do nauki i dostęp do bazy pytań',
+      'możliwość rozłożenia płatności na raty',
+      'e-learning',
+    ],
+  },
+  {
+    id: 'STANDARDOWY',
+    title: 'Kurs podstawowoy kat. B',
+    planTitle: 'STANDARDOWY',
+    price: '2590',
+
+    characteristic: [
+      '30h jazd praktycznych',
+      'zajęcia z ratownikiem medycznym',
+      'jazda po placu egzaminacyjnym WORD',
+      'zajęcia praktyczne na NOWYM samochodzie Hyundai i20 (dokładnie taki sam jak w WORD Rzeszów)',
+      'wszelkie niezbędne materiały do nauki i dostęp do bazy pytań',
+      'sprawnie przeprowadzone wykłady',
+      'szybkie terminy jazd',
+      'możliwość rozłożenia płatności na raty',
+    ],
+  },
+  {
+    id: 'fast',
+    title: 'Kurs podstawowoy kat. B',
+    planTitle: '2-3 TYGODNIE',
+    price: '3290',
+
+    characteristic: [
+      '30h jazd praktycznych',
+      'zajęcia z ratownikiem medycznym',
+      'jazda po placu egzaminacyjnym WORD',
+      'zajęcia praktyczne na NOWYM samochodzie Hyundai i20 (dokładnie taki sam jak w WORD Rzeszów)',
+      'wszelkie niezbędne materiały do nauki i dostęp do bazy pytań',
+      'sprawnie przeprowadzone wykłady',
+      'szybkie terminy jazd',
+      'możliwość rozłożenia płatności na raty',
+    ],
+  },
+];

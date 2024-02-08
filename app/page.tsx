@@ -1,7 +1,7 @@
-import Requirements from '@/components/requirements-section/requaiers';
-import WelcomeSection from '@/components/welcome-section/welcome-section';
-import PersuadeSection from '@/components/persuade-section/persuade-section';
-import SignUpSection from '@/components/sign-up-section/sign-up-section';
+import Requirements from '@/components/home-page/requirements-section/requaiers';
+import WelcomeSection from '@/components/home-page/welcome-section/welcome-section';
+import PersuadeSection from '@/components/home-page/persuade-section/persuade-section';
+import SignUpSection from '@/components/home-page/sign-up-section/sign-up-section';
 
 export default function Home() {
   return (

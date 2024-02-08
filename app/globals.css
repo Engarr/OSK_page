@@ -17,6 +17,7 @@
   --black-60: rgba(0, 0, 0, 0.6);
   --black-30: rgba(0, 0, 0, 0.3);
   --white-80: rgba(248, 241, 241, 0.8);
+  --white-50: rgba(255, 255, 255, 0.5);
   --text-white-1: rgb(248, 241, 241);
   --fb-blue: #0866ff;
   --ig-violet: rgb(240, 0, 140);
@@ -42,5 +43,12 @@ body {
     180deg,
     rgba(248, 241, 241, 0),
     rgb(248, 241, 241, 0.85)
+  );
+}
+.gradient-background-down {
+  background: linear-gradient(
+    180deg,
+    rgba(248, 241, 241, 0.85),
+    rgb(248, 241, 241, 0)
   );
 }

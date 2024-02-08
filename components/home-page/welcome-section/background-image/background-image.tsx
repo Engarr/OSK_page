@@ -7,7 +7,7 @@ const BackgroundImage = () => {
     <div className='h-[calc(100vh-82px)] absolute top-0 right-0 w-full'>
       <Image
         src={backgroundImage}
-        alt='background'
+        alt=''
         placeholder='blur'
         quality={80}
         priority

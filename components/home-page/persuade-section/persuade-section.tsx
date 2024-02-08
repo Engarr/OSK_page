@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react';
 import WhyUs from './why-us/why-us';
-import Achievements from './achievements/achievements';
+import Achievements from '../achievements/achievements';
 import RankingPage from './ranking-page/ranking-page';
-import Wrapper from '../ui/wrapper';
+import Wrapper from '../../ui/wrapper';
 
 const Video = React.lazy(() => import('./video/video'));
 const Opinions = React.lazy(() => import('./opinions/opinions'));

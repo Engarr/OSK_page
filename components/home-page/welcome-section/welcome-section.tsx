@@ -3,7 +3,7 @@ import BackgroundImage from './background-image/background-image';
 import WelcomeCard from './welcome-card/welcome-card';
 import Image from 'next/image';
 import woman from '@/public/images/welcome_background/woman.png';
-import Wrapper from '../ui/wrapper';
+import Wrapper from '../../ui/wrapper';
 
 const WelcomeSection = () => {
   return (
