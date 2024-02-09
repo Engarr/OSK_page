@@ -13,8 +13,17 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'NEOCAR',
-  description: 'OSK NEOCAR RZESZÓW',
+  title: 'Ośrodek Szkolenia Kierowców OSK NEOCAR',
+  description:
+    'Zapoznaj się z ofertą szkoleń w Ośrodku Szkolenia Kierowców NeoCar. Oferujemy wysokiej jakości kursy dla przyszłych kierowców. Skontaktuj się z nami już dziś!',
+  keywords: [
+    'Ośrodek Szkolenia Kierowców',
+    'NeoCar',
+    'kursy prawa jazdy',
+    'szkolenia kierowców',
+    'doskonalenie techniki jazdy',
+    'bezpieczna jazda',
+  ],
 };
 
 export default function RootLayout({
@@ -23,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className='!scroll-smooth'>
+    <html lang='en' className='!scroll-smooth '>
       <body className={`${poppins.className} overflow-x-hidden`}>
         <ContextProvider>
           <Header />

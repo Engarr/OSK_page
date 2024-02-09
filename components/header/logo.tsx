@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 const Logo = () => {
   return (
     <motion.div
-      className='lg:w-[187px] lg:h-[62px] w-[120px] h-[62px] flexCenter'
+      className='lg:w-[187px] lg:h-[62px] w-[120px] h-[62px] flexCenter z-50'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       whileHover={{ scale: 1.02 }}

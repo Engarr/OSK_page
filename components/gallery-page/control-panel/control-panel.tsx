@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const actions = [
   { Icon: IoIosArrowBack, action: 'onPrev' },
-  { Icon: IoClose, action: 'onClose' },
+  { Icon: 'ESC', action: 'onClose' },
   { Icon: IoIosArrowForward, action: 'onNext' },
 ];
 
@@ -21,7 +21,7 @@ const ControlPanel = ({ onClose, onNext, onPrev }: ControlPanelType) => {
   };
 
   return (
-    <div className='absolute bottom-[5%] left-1/2 -translate-x-1/2 w-[200px] h-[50px] bg-[var(--white-50)] z-[110] flex justify-around items-center rounded-2xl '>
+    <div className='absolute bottom-[5%] left-1/2 -translate-x-1/2 w-[200px] h-[50px] bg-[var(--white-50)] z-[110] flex justify-around items-center rounded-2xl  font-semibold'>
       {actions.map(({ Icon, action }, index) => (
         <motion.div
           whileHover={{ scale: 1.1 }}
@@ -37,7 +37,7 @@ const ControlPanel = ({ onClose, onNext, onPrev }: ControlPanelType) => {
                 : onNext
             )
           }>
-          <Icon />
+          {typeof Icon !== 'string' ? <Icon /> : Icon}
         </motion.div>
       ))}
     </div>

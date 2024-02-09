@@ -14,12 +14,12 @@ const Title = () => {
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         <Image src={logo} alt='logo' className='' width={500} priority />
       </motion.div>
-      <h1 className='flexCenter text-lg s:text-xl lg:text-3xl xl:text-3xl 2xl:text-5xl mt-5 text-[var(--text-white-1)] font-bold w-full z-20'>
-        <AnimateText text='Ośrodek' style=' pr-2 xl:pr-4' />
+      <div className='flexCenter text-lg s:text-xl lg:text-3xl xl:text-3xl 2xl:text-5xl mt-5 text-[var(--text-white-1)] font-bold w-full z-20'>
+        <AnimateText text='Ośrodek' style=' pr-2 xl:pr-4' Element='h1' />
 
-        <AnimateText text='Szkolenia' style=' pr-2 xl:pr-4' />
-        <AnimateText text='Kierowców' />
-      </h1>
+        <AnimateText text='Szkolenia' style=' pr-2 xl:pr-4' Element='h1' />
+        <AnimateText text='Kierowców' Element='h1' />
+      </div>
 
       <NavigateBtn
         text='Zapisz się już dziś!'

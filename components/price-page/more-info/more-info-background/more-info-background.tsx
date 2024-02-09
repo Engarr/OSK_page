@@ -4,14 +4,14 @@ import Image from 'next/image';
 
 const MoreInfoBackground = () => {
   return (
-    <div>
+    <div className='absolute h-full w-full'>
       <Image
         src={backgroundImage}
         alt=''
         sizes='100vw'
         fill
-        priority
-        className='object-cover z-[-3]  opacity-15'
+        loading='lazy'
+        className='object-cover z-[-3] opacity-10'
       />
     </div>
   );

@@ -2,9 +2,10 @@
 
 import whyQuest from '@/public/images/Why_Quest.png';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 
 import { cn } from '@/lib/utils';
+import { useRef } from 'react';
 
 const motionVariants = {
   initial: {
@@ -32,8 +33,11 @@ const btnAnimation = {
 };
 
 const HowToStart = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
   return (
     <motion.div
+      ref={ref}
       className='z-20 relative flex flex-col items-center
       top-[10px] w-full p-2
        md:max-w-[34rem]      
@@ -42,11 +46,11 @@ const HowToStart = () => {
       '
       variants={motionVariants}
       initial='initial'
-      whileInView='visible'>
+      animate={isInView ? 'visible' : 'initial'}>
       <div className='flexCenter mb-1 xl:mb-3 relative'>
-        <h3 className='font-bold text-[var(--main-page-color)] text-base md:text-xl xl:text-3xl '>
+        <h2 className='font-bold text-[var(--main-page-color)] text-base md:text-xl xl:text-3xl '>
           Jak zacząć
-        </h3>
+        </h2>
         <Image
           src={whyQuest}
           alt='why_icon'

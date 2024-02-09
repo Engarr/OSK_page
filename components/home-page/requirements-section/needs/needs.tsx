@@ -65,15 +65,20 @@ const Needs = () => {
             variants={requirementsVariant}
             initial='hidden'
             animate={isRequirementsInView ? 'visible' : 'hidden'}>
-            <div className='flex items-center justify-start'>
-              <Image src={r.img} alt='Zdjęcie wymagania' className='mr-2' />
+            <div className='flex items-center justify-start gap-2'>
+              <Image
+                src={r.img}
+                alt='Zdjęcie wymagania'
+                className=''
+                width={50}
+                height={50}
+              />
               <p className=' text-xs md:text-sm xl:text-base'>{r.text}</p>
             </div>
             <div className='md:block w-[100%] relative  bg-[var(--line-color)] h-[1px] mt-1 lg:mt-4' />
           </motion.div>
         ))}
       </div>
-      
     </div>
   );
 };

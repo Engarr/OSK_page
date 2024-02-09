@@ -21,9 +21,9 @@ const Page = () => {
         </motion.div>
         <Suspense
           fallback={
-            <div className='relative bottom-0 w-full h-[200px] lg:h-[400px] lg:px-5 lg:mt-20' />
+            <div className='relative bottom-0 w-full h-[200px] lg:h-[400px] lg:px-5 lg:mt-20 bg-transparent' />
           }>
-          <h2 className=' text-xl xl:text-2xl font-semibold text-[var(--main-page-color)] lg:mt-20'>
+          <h2 className=' text-xl xl:text-2xl font-semibold text-[var(--main-page-color)] lg:my-10'>
             Tu nas znajdziesz
           </h2>
           <motion.div

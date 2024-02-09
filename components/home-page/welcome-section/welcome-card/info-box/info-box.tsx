@@ -15,9 +15,9 @@ const InfoBox = ({ img, text }: InfoBox) => {
         className='w-[20px] md:w-[30px] lg:w-auto mx-1'
         priority
       />
-      <p className='text-[var(--text-white-1)] text-xs lg:text-base ml-2 font-semibold tracking-wider '>
+      <h3 className='text-[var(--text-white-1)] text-xs lg:text-base ml-2 font-semibold tracking-wider '>
         {text}
-      </p>
+      </h3>
     </div>
   );
 };

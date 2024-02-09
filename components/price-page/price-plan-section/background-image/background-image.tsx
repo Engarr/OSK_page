@@ -5,21 +5,23 @@ import backgroundImageMobile from '@/public/images/price-page-background_mobile.
 
 const BackgroundImage = () => {
   return (
-    <div className='opacity-20'>
+    <div className='opacity-10 absolute h-full w-full top-0 left-0'>
       <Image
         src={backgroundImage}
         alt='backgorund'
-        sizes='100vw'
+        sizes='100vh'
+        quality={50}
         fill
-        priority
+        loading='lazy'
         className='hidden lg:inline object-cover z-[-3] '
       />
       <Image
         src={backgroundImageMobile}
         alt='backgorund'
-        sizes='100vw'
+        quality={50}
+        sizes='100vh'
         fill
-        priority
+        loading='lazy'
         className='inline lg:hidden object-cover z-[-3] '
       />
     </div>

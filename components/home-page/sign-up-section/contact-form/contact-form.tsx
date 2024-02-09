@@ -98,7 +98,7 @@ const Input = <T extends FieldValues, K extends Path<T>>({
     <input
       {...field}
       type={type}
-      className='px-2 py-2'
+      className='px-2 py-2 shadow-2xl'
       placeholder={placeholder}
     />
   );

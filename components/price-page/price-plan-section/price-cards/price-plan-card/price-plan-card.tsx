@@ -22,10 +22,10 @@ const PricePlanCard = ({
       key={id}
       className='bg-[var(--background-white-2)] rounded-md flex flex-col items-center gap-2 py-10 max-w-[450px] w-full lg:min-h-[650px] shadow-xl'>
       <div className=' flexCenter flex-col w-full gap-1'>
-        <p className='font-bold text-base lg:text-xl xl:text-2xl'>{title}</p>
-        <p className='font-light text-sm lg:text-base xl:text-lg'>
+        <h1 className='font-bold text-base lg:text-xl xl:text-2xl'>{title}</h1>
+        <h2 className='font-light text-sm lg:text-base xl:text-lg'>
           {planTitle}
-        </p>
+        </h2>
         <p className=''>
           <span className='text-sm'>PLN </span>
           <span className='font-bold text-lg xl:text-2xl text-[var(--main-page-color)]'>

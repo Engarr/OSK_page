@@ -6,8 +6,7 @@ import AnimateText from '@/components/ui/animate-text';
 import { motion } from 'framer-motion';
 
 const PlanCard = () => {
-  const animateTextStyle =
-    'text-2xl lg:text-3xl lg:text-4xl font-extrabold pr-1 mt-1 lg:pr-2 lg:mt-2';
+  const animateTextStyle = ' font-extrabold pr-1 mt-1 lg:pr-2 lg:mt-2 ';
   return (
     <div className='flexCenter relative'>
       <motion.div
@@ -18,13 +17,16 @@ const PlanCard = () => {
         <Image src={car} alt='car_photo' priority fill sizes='100vh' />
       </motion.div>
       <div className='flexCenter flex-col mt-3 lg:mt-10 text-lg lg:text-2xl z-10 text-[var(--text-white-1)] font-semibold'>
-        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <motion.h2 initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           Kategoria B już od
-        </motion.p>
+        </motion.h2>
 
         <div className='flex items-end'>
-          <AnimateText style={animateTextStyle} text='2590' />
-          <AnimateText style={animateTextStyle} text='PLN' />
+          <AnimateText
+            style={`${animateTextStyle} text-2xl lg:text-3xl lg:text-4xl`}
+            text='2590'
+          />
+          <AnimateText style={`${animateTextStyle} text-base `} text='PLN' />
         </div>
 
         <motion.div

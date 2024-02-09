@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 type AnimateTextType = {
   text: string;
-  el?: keyof JSX.IntrinsicElements;
+  Element?: keyof JSX.IntrinsicElements;
   style?: string;
 };
 
@@ -33,9 +33,9 @@ const defaultAnimation = {
   },
 };
 
-const AnimateText = ({ text, el, style }: AnimateTextType) => {
+const AnimateText = ({ text, Element = 'p', style }: AnimateTextType) => {
   return (
-    <p className={cn('', style)}>
+    <Element className={cn('inline-block', style)}>
       <span className='sr-only'>{text}</span>
       {text.split('').map((char, index) => (
         <motion.span
@@ -47,11 +47,11 @@ const AnimateText = ({ text, el, style }: AnimateTextType) => {
           whileHover='whileHover'
           transition={{ type: 'spring', stiffness: 300 }}
           custom={index}
-          className='inline-block '>
+          className=''>
           {char}
         </motion.span>
       ))}
-    </p>
+    </Element>
   );
 };
 

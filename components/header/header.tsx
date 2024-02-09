@@ -15,12 +15,6 @@ const Header = () => {
           <Logo />
           <div>
             <Navigation />
-            <motion.div
-              className='lg:w-[113%] lg:bg-[var(--line-color)] 
-            lg:h-[1px] lg:mt-2 right-[54px] relative'
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-            />
           </div>
         </motion.section>
       )}

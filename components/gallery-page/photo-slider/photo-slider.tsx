@@ -12,6 +12,11 @@ import ControlPanel from '../control-panel/control-panel';
 type PhotoSliderType = {
   imagesPaths: StaticImageData[];
   title: string;
+  setFullscreenImageArr: React.Dispatch<
+    React.SetStateAction<StaticImageData[] | null>
+  >;
+  imgIndex: number;
+  setImgIndex: React.Dispatch<React.SetStateAction<number>>;
 };
 const DRAG_BUFFER = 30;
 const SPRING_OPTIONS = {
@@ -21,12 +26,15 @@ const SPRING_OPTIONS = {
   damping: 50,
 };
 
-const PhotoSlider = ({ imagesPaths, title }: PhotoSliderType) => {
+const PhotoSlider = ({
+  imagesPaths,
+  title,
+  setImgIndex,
+  imgIndex,
+  setFullscreenImageArr,
+}: PhotoSliderType) => {
   const [dragging, setDragging] = useState(false);
-  const { isFullScreenActive, setIsFullScreenActive } = useActiveFullScreen();
-  const [fullscreenImage, setFullscreenImage] =
-    useState<StaticImageData | null>(null);
-  const [imgIndex, setImgIndex] = useState(0);
+  const { setIsFullScreenActive } = useActiveFullScreen();
 
   const dragX = useMotionValue(0);
 
@@ -42,26 +50,14 @@ const PhotoSlider = ({ imagesPaths, title }: PhotoSliderType) => {
       setImgIndex((prev) => prev - 1);
     }
   };
-  const handleImageClick = (image: StaticImageData) => {
-    setFullscreenImage(image);
+  const OnClickSetFullScreenImagesArr = (imagesArr: StaticImageData[]) => {
+    setFullscreenImageArr(imagesArr);
     setIsFullScreenActive(true);
   };
-  const onClose = () => {
-    setIsFullScreenActive(false);
-    setFullscreenImage(null);
-  };
+
   return (
     <>
-      {isFullScreenActive && (
-        <FullscreenImage
-          image={fullscreenImage}
-          onClose={onClose}
-          setImgIndex={setImgIndex}
-          imgIndex={imgIndex}
-          imagesPaths={imagesPaths}
-        />
-      )}
-      <div className=' relative  overflow-hidden xl:py-5 w-full xl:w-3/4  bg-[var(--background-white-2)] p-2 rounded-md mb-5 mt-10'>
+      <div className=' relative  overflow-hidden xl:py-5 w-full xl:w-3/4  bg-[var(--background-white-2)] p-2  mb-5 mt-10'>
         <h2 className='text-center text-2xl font-semibold text-[var(--main-page-color)] py-2'>
           {title}
         </h2>
@@ -77,7 +73,7 @@ const PhotoSlider = ({ imagesPaths, title }: PhotoSliderType) => {
           <Images
             imagesPaths={imagesPaths}
             imgIndex={imgIndex}
-            handleImageClick={handleImageClick}
+            OnClickSetFullScreenImagesArr={OnClickSetFullScreenImagesArr}
           />
         </motion.div>
         <Dots
@@ -95,13 +91,13 @@ export default PhotoSlider;
 type ImagesPathsType = {
   imagesPaths: StaticImageData[];
   imgIndex: number;
-  handleImageClick: (image: StaticImageData) => void;
+  OnClickSetFullScreenImagesArr: (imagesArr: StaticImageData[]) => void;
 };
 
 const Images = ({
   imagesPaths,
   imgIndex,
-  handleImageClick,
+  OnClickSetFullScreenImagesArr,
 }: ImagesPathsType) => {
   return (
     <>
@@ -114,7 +110,7 @@ const Images = ({
             transition={SPRING_OPTIONS}>
             <div
               className='absolute left-[90%] md:left-[80%] top-[2%] text-2xl  lg:opacity-0 group-hover:opacity-100 transition-all z-[100] p-1 cursor-pointer text-[var(--main-page-color)] hover:scale-[1.2] bg-white rounded-full shadow-xl '
-              onClick={() => handleImageClick(image)}>
+              onClick={() => OnClickSetFullScreenImagesArr(imagesPaths)}>
               <HiMagnifyingGlassPlus />
             </div>
             <div className='z-[50] h-[100%] w-[100%] absolute  bg-black opacity-0'></div>
@@ -125,7 +121,7 @@ const Images = ({
               quality={100}
               fill
               sizes='100vh'
-              className='object-contain z-0 '
+              className='object-contain z-0  '
               loading='lazy'
             />
           </motion.div>
@@ -169,80 +165,5 @@ const Dots = ({
         );
       })}
     </div>
-  );
-};
-
-type FullscreenImageTye = {
-  image: StaticImageData | null;
-  onClose: () => void;
-  imgIndex: number;
-  imagesPaths: StaticImageData[];
-  setImgIndex: React.Dispatch<React.SetStateAction<number>>;
-};
-const FullscreenImage = ({
-  image,
-  onClose,
-  imgIndex,
-  setImgIndex,
-  imagesPaths,
-}: FullscreenImageTye) => {
-  const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.key === 'ArrowLeft') {
-      setImgIndex((prevIndex) =>
-        prevIndex === 0 ? imagesPaths.length - 1 : prevIndex - 1
-      );
-    } else if (e.key === 'ArrowRight') {
-      setImgIndex((prevIndex) =>
-        prevIndex === imagesPaths.length - 1 ? 0 : prevIndex + 1
-      );
-    }
-  };
-  const onNextImg = () => {
-    setImgIndex((prevIndex) =>
-      prevIndex === imagesPaths.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-  const onPrevImg = () => {
-    setImgIndex((prevIndex) =>
-      prevIndex === 0 ? imagesPaths.length - 1 : prevIndex - 1
-    );
-  };
-  useEffect(() => {
-    window.addEventListener('keydown', handleKeyDown);
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [setImgIndex, imagesPaths]);
-
-  return (
-    <>
-      {image && (
-        <div className='sticky top-0 left-0 bottom-0 right-0 w-screen h-screen bg-[var(--black-95)] flex justify-center items-center z-[100] '>
-          <motion.button
-            onClick={onClose}
-            className='absolute top-[2%] right-[5%] text-white text-2xl z-[110] bg-[var(--black-80)] rounded-full p-1 xl:p-2'
-            whileHover={{ scale: 1.1, color: 'var(--main-page-color)' }}
-            whileTap={{ scale: 0.95, rotate: 90 }}>
-            <IoClose onClick={onClose} />
-          </motion.button>
-          <ControlPanel
-            onClose={onClose}
-            onNext={onNextImg}
-            onPrev={onPrevImg}
-          />
-          <div className='relative h-full w-full'>
-            <Image
-              src={imagesPaths[imgIndex].src}
-              alt='zdjęcie galerii'
-              quality={100}
-              fill
-              className='object-contain z-50 relative '
-              loading='eager'
-            />
-          </div>
-        </div>
-      )}
-    </>
   );
 };
