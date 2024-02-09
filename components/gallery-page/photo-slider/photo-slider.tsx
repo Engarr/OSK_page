@@ -1,13 +1,11 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { motion, useMotionValue } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
 import { cn } from '@/lib/utils';
 import { HiMagnifyingGlassPlus } from 'react-icons/hi2';
-import { IoClose } from 'react-icons/io5';
 import { useActiveFullScreen } from '@/context/active-full-screen-context';
-import ControlPanel from '../control-panel/control-panel';
 
 type PhotoSliderType = {
   imagesPaths: StaticImageData[];
@@ -15,7 +13,7 @@ type PhotoSliderType = {
   setFullscreenImageArr: React.Dispatch<
     React.SetStateAction<StaticImageData[] | null>
   >;
-  imgIndex: number;
+
   setImgIndex: React.Dispatch<React.SetStateAction<number>>;
 };
 const DRAG_BUFFER = 30;
@@ -30,11 +28,11 @@ const PhotoSlider = ({
   imagesPaths,
   title,
   setImgIndex,
-  imgIndex,
   setFullscreenImageArr,
 }: PhotoSliderType) => {
   const [dragging, setDragging] = useState(false);
   const { setIsFullScreenActive } = useActiveFullScreen();
+  const [imageIdx, setImageIdx] = useState(0);
 
   const dragX = useMotionValue(0);
 
@@ -44,14 +42,18 @@ const PhotoSlider = ({
   const onDragEnd = () => {
     setDragging(false);
     const x = dragX.get();
-    if (x <= -DRAG_BUFFER && imgIndex < imagesPaths.length - 1) {
-      setImgIndex((prev) => prev + 1);
-    } else if (x >= DRAG_BUFFER && imgIndex > 0) {
-      setImgIndex((prev) => prev - 1);
+    if (x <= -DRAG_BUFFER && imageIdx < imagesPaths.length - 1) {
+      setImageIdx((prev) => prev + 1);
+    } else if (x >= DRAG_BUFFER && imageIdx > 0) {
+      setImageIdx((prev) => prev - 1);
     }
   };
-  const OnClickSetFullScreenImagesArr = (imagesArr: StaticImageData[]) => {
+  const OnClickSetFullScreenImagesArr = (
+    imagesArr: StaticImageData[],
+    activeImageIndex: number
+  ) => {
     setFullscreenImageArr(imagesArr);
+    setImgIndex(activeImageIndex);
     setIsFullScreenActive(true);
   };
 
@@ -66,19 +68,19 @@ const PhotoSlider = ({
           drag='x'
           dragConstraints={{ left: 0, right: 0 }}
           style={{ x: dragX }}
-          animate={{ translateX: `-${imgIndex * 100}%` }}
+          animate={{ translateX: `-${imageIdx * 100}%` }}
           transition={SPRING_OPTIONS}
           onDragStart={onDragStart}
           onDragEnd={onDragEnd}>
           <Images
             imagesPaths={imagesPaths}
-            imgIndex={imgIndex}
+            imageIdx={imageIdx}
             OnClickSetFullScreenImagesArr={OnClickSetFullScreenImagesArr}
           />
         </motion.div>
         <Dots
-          imgIndex={imgIndex}
-          setImgIndex={setImgIndex}
+          imageIdx={imageIdx}
+          setImageIdx={setImageIdx}
           imagesPaths={imagesPaths}
         />
       </div>
@@ -90,13 +92,16 @@ export default PhotoSlider;
 
 type ImagesPathsType = {
   imagesPaths: StaticImageData[];
-  imgIndex: number;
-  OnClickSetFullScreenImagesArr: (imagesArr: StaticImageData[]) => void;
+  imageIdx: number;
+  OnClickSetFullScreenImagesArr: (
+    imagesArr: StaticImageData[],
+    activeImageIndex: number
+  ) => void;
 };
 
 const Images = ({
   imagesPaths,
-  imgIndex,
+  imageIdx,
   OnClickSetFullScreenImagesArr,
 }: ImagesPathsType) => {
   return (
@@ -106,11 +111,11 @@ const Images = ({
           <motion.div
             key={idx}
             className='aspect-auto relative shrink-0 w-[100%] h-[100%] group'
-            animate={{ scale: imgIndex === idx ? 0.95 : 0.85 }}
+            animate={{ scale: imageIdx === idx ? 0.95 : 0.85 }}
             transition={SPRING_OPTIONS}>
             <div
               className='absolute left-[90%] md:left-[80%] top-[2%] text-2xl  lg:opacity-0 group-hover:opacity-100 transition-all z-[100] p-1 cursor-pointer text-[var(--main-page-color)] hover:scale-[1.2] bg-white rounded-full shadow-xl '
-              onClick={() => OnClickSetFullScreenImagesArr(imagesPaths)}>
+              onClick={() => OnClickSetFullScreenImagesArr(imagesPaths, idx)}>
               <HiMagnifyingGlassPlus />
             </div>
             <div className='z-[50] h-[100%] w-[100%] absolute  bg-black opacity-0'></div>
@@ -132,12 +137,12 @@ const Images = ({
 };
 
 const Dots = ({
-  imgIndex,
-  setImgIndex,
+  imageIdx,
+  setImageIdx,
   imagesPaths,
 }: {
-  imgIndex: number;
-  setImgIndex: React.Dispatch<React.SetStateAction<number>>;
+  imageIdx: number;
+  setImageIdx: React.Dispatch<React.SetStateAction<number>>;
   imagesPaths: StaticImageData[];
 }) => {
   return (
@@ -146,11 +151,11 @@ const Dots = ({
         return (
           <button
             key={index}
-            onClick={() => setImgIndex(index)}
+            onClick={() => setImageIdx(index)}
             className={cn(
               'max-h-[50px] xl:max-h-[100px]  max-w-[50px] xl:max-w-[100px] overflow-hidden  border-2 assp relative',
               {
-                'border-[var(--main-page-color)] ': imgIndex === index,
+                'border-[var(--main-page-color)] ': imageIdx === index,
               }
             )}>
             <Image

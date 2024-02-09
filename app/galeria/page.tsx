@@ -17,7 +17,7 @@ const Page = () => {
   const [fullscreenImageArr, setFullscreenImageArr] = useState<
     StaticImageData[] | null
   >(null);
-  const [imgIndex, setImgIndex] = useState(0);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
   const onClose = () => {
     setIsFullScreenActive(false);
     setFullscreenImageArr(null);
@@ -37,26 +37,26 @@ const Page = () => {
       </div>
       <div className='relative '>
         <Wrapper style='left-1/2 -translate-x-1/2 p-0 flex-col '>
+          <h2 className=' text-2xl lg:text-3xl mt-5 text-[var(--main-page-color)] font-bold'>
+            Poznaj nas bardziej
+          </h2>
           <PhotoSlider
             imagesPaths={carsGallery.imgArr}
             title={carsGallery.title}
             setFullscreenImageArr={setFullscreenImageArr}
-            setImgIndex={setImgIndex}
-            imgIndex={imgIndex}
+            setImgIndex={setActiveImageIndex}
           />
           <PhotoSlider
             imagesPaths={officeGallery.imgArr}
             title={officeGallery.title}
             setFullscreenImageArr={setFullscreenImageArr}
-            setImgIndex={setImgIndex}
-            imgIndex={imgIndex}
+            setImgIndex={setActiveImageIndex}
           />
           <PhotoSlider
             imagesPaths={maneuveringAreaGallery.imgArr}
             title={maneuveringAreaGallery.title}
             setFullscreenImageArr={setFullscreenImageArr}
-            setImgIndex={setImgIndex}
-            imgIndex={imgIndex}
+            setImgIndex={setActiveImageIndex}
           />
         </Wrapper>
       </div>
@@ -64,9 +64,9 @@ const Page = () => {
         <div className='sticky top-0 left-0 bottom-0 right-0 w-screen h-screen bg-[var(--black-95)] flex justify-center items-center z-[100] '>
           <FullscreenImage
             onClose={onClose}
-            imgIndex={imgIndex}
+            imgIndex={activeImageIndex}
             imagesPaths={fullscreenImageArr}
-            setImgIndex={setImgIndex}
+            setImgIndex={setActiveImageIndex}
           />
         </div>
       )}
