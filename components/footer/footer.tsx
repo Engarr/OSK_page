@@ -39,8 +39,8 @@ const Footer = () => {
   return (
     <>
       {!isFullScreenActive && (
-        <footer className='bg-[var(--black-95)] text-[var(--text-white-1)] py-4'>
-          <Wrapper style='left-1/2 -translate-x-1/2 min-h-[250px]  '>
+        <footer className=' bg-[var(--black-95)] text-[var(--text-white-1)] py-4 z-50'>
+          <Wrapper style='left-1/2 -translate-x-1/2 min-h-[250px] flex flex-col '>
             <div className='w-3/4 flex justify-around items-center text-center lg:text-start flex-col xl:flex-row gap-4 lg:gap-1'>
               <div className=' max-w-[20rem] items-center xl:items-start flex flex-col mb-5 xl:mb-0'>
                 <Image
@@ -74,17 +74,17 @@ const Footer = () => {
                 </div>
               </div>
             </div>
+            <p className='text-center text-xs mt-10'>
+              Strona wykonana przez firmę Modezp -
+              <a
+                href='https://www.modezp.com/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='pl-1 hover:text-[var(--main-page-color)] transition-colors text-blue-400'>
+                www.modezp.com
+              </a>
+            </p>
           </Wrapper>
-          <p className='text-center text-xs mt-2'>
-            Strona wykonana przez firmę Modezp -
-            <a
-              href='https://www.modezp.com/'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='pl-1 hover:text-[var(--main-page-color)] transition-colors text-blue-400'>
-              www.modezp.com
-            </a>
-          </p>
         </footer>
       )}
     </>

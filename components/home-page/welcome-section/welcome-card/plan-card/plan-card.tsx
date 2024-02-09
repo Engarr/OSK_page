@@ -10,7 +10,7 @@ const PlanCard = () => {
   return (
     <div className='flexCenter relative'>
       <motion.div
-        className='hiden absolute h-full md:right-[156px] md:top-[-112px] md:w-[315px] md:h-[358px] lg:right-[164px] lg:top-[-132px] lg:w-[404px] lg:h-[446px] z-0'
+        className='hiden absolute h-full md:right-[156px] md:top-[-112px] md:w-[315px] md:h-[358px] lg:right-[164px] lg:top-[-132px] lg:w-[404px] lg:h-[446px] z-0 mr-10'
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ type: 'spring', stiffness: 100, delay: 0.5 }}>

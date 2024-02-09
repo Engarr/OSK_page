@@ -64,7 +64,7 @@ const HowToStart = () => {
         tożsamości (dowód osobisty lub paszport), dodatkowo zgoda rodzica jeżeli
         jest się osobą nie pełnoletnią
       </p>
-      <div className='flexCenter  gap-2 mt-4'>
+      <div className='flexCenter gap-2 xl:gap-4 mt-4'>
         <DocuementBtn text='Pobierz wniosek PKK' />
         <DocuementBtn
           text='Zgoda rodzica'
@@ -91,7 +91,7 @@ const DocuementBtn = ({ text, style }: DocuementBtn) => {
       whileTap={{ scale: 0.95 }}
       transition={{ type: 'spring', stiffness: 300 }}
       className={cn(
-        'bg-[var(--main-page-color)] rounded-md shadow-2xl text-[var(--text-white-1)] font-bold tracking-wider px-2 py-3 ',
+        'bg-[var(--main-page-color)] rounded-md shadow-2xl text-[var(--text-white-1)] font-semibold tracking-wider px-1 py-2 xl:px-2 xl:py-3 text-sm xl:text-base',
         style
       )}>
       {text}

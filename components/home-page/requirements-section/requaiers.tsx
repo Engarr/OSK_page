@@ -37,7 +37,7 @@ const Requirements = () => {
             src={car_2}
             alt='samochód'
             loading='lazy'
-            className=' lg:inline-block m-2 lg:mt-[200px]'
+            className=' lg:inline-block mt-6 lg:mt-[200px]'
           />
           <HowToStart />
         </motion.div>
