@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { navLinks } from '@/lib/data';
-import MenuToggleButton from '../menu-toggle-button/menu-toggle-button';
+import MenuToggleButton from '../ui/menu-toggle-button';
 import Socialmedia from './socialmedia';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
@@ -27,7 +27,7 @@ const Navigation = () => {
       <nav className='flexCenter '>
         <motion.div
           className={cn(
-            'left-0 top-0 bg-[var(--black-95)] w-full h-full transition-all fixed text-center pt-[12.5rem] tracking-wider lg:relative lg:bg-transparent lg:flexCenter lg:flex-row lg:p-0 lg:w-auto lg:h-auto lg:tracking-normal z-40',
+            'fixed left-0 top-0 bg-[var(--black-95)] w-full h-full transition-all  md:fixed text-center pt-[12.5rem] tracking-wider lg:relative lg:bg-transparent lg:flexCenter lg:flex-row lg:p-0 lg:w-auto lg:h-auto lg:tracking-normal z-40',
             {
               'left-[100%] lg:left-0 ': !isMenuVisible,
             }

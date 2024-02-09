@@ -18,7 +18,7 @@ const Achievements = () => {
           xl:px-3 xl:py-5 w-full
           lg:w-[350px] xl:gap-4'>
           <p className='text-lg xl:text-2xl'>{opinion.text}</p>
-          <div className='flex items-end gap-3'>
+          <div className='flex items-end'>
             <p className=' text-base xl:text-xl tracking-wider'>
               {opinion.text_2}
             </p>

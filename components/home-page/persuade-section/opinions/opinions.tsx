@@ -80,7 +80,7 @@ const Opinions = () => {
         </div>
         <div className=' relative w-full lg:w-3/4 overflow-hidden left-1/2 -translate-x-1/2 flex'>
           <motion.div
-            className='flex cursor-grab active:cursor-grabbing '
+            className='flex cursor-grab active:cursor-grabbing'
             drag='x'
             animate={
               width !== undefined
