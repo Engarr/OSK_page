@@ -5,7 +5,6 @@ import { motion, useMotionValue } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
 import { cn } from '@/lib/utils';
 import { HiMagnifyingGlassPlus } from 'react-icons/hi2';
-import { useActiveFullScreen } from '@/context/active-full-screen-context';
 
 type PhotoSliderType = {
   imagesPaths: StaticImageData[];
@@ -31,7 +30,6 @@ const PhotoSlider = ({
   setFullscreenImageArr,
 }: PhotoSliderType) => {
   const [dragging, setDragging] = useState(false);
-  const { setIsFullScreenActive } = useActiveFullScreen();
   const [imageIdx, setImageIdx] = useState(0);
 
   const dragX = useMotionValue(0);
@@ -54,7 +52,7 @@ const PhotoSlider = ({
   ) => {
     setFullscreenImageArr(imagesArr);
     setImgIndex(activeImageIndex);
-    setIsFullScreenActive(true);
+    document.body.style.overflowY = 'hidden';
   };
 
   return (

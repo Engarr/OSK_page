@@ -4,10 +4,13 @@ import { IoClose } from 'react-icons/io5';
 import ControlPanel from '../control-panel/control-panel';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
-import { useActiveFullScreen } from '@/context/active-full-screen-context';
 
 type FullscreenImageProps = {
   onClose: () => void;
+  setFullscreenImageArr: React.Dispatch<
+    React.SetStateAction<StaticImageData[] | null>
+  >;
+
   imgIndex: number;
   imagesPaths: StaticImageData[] | null;
   setImgIndex: React.Dispatch<React.SetStateAction<number>>;
@@ -18,8 +21,8 @@ const FullscreenImage = ({
   imgIndex,
   setImgIndex,
   imagesPaths,
+  setFullscreenImageArr,
 }: FullscreenImageProps) => {
-  const { isFullScreenActive, setIsFullScreenActive } = useActiveFullScreen();
 
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === 'ArrowLeft' && imagesPaths) {
@@ -31,8 +34,8 @@ const FullscreenImage = ({
         prevIndex === imagesPaths.length - 1 ? 0 : prevIndex + 1
       );
     } else if (e.key === 'Escape') {
-      document.body.classList.remove('overflow-hidden');
-      setIsFullScreenActive(false);
+      document.body.style.overflowY = 'auto';
+      setFullscreenImageArr(null);
     }
   };
 
@@ -59,14 +62,6 @@ const FullscreenImage = ({
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [setImgIndex, imagesPaths]);
-
-  useEffect(() => {
-    if (isFullScreenActive) {
-      document.body.classList.add('overflow-hidden');
-    } else {
-      document.body.classList.remove('overflow-hidden');
-    }
-  }, [isFullScreenActive]);
 
   return (
     <>

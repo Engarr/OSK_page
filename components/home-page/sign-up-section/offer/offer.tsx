@@ -7,7 +7,6 @@ const offerData = [
   'Książka + testy do nauki GRATIS',
   'Możliwość płatności w ratach',
   'Możliwość zapisu 3 miesiące przed 18-stką',
-  'Dojazd do Kursanta na terenie miasta Rzeszowa',
   'Dodatkowe jazdy doszkalające',
 ];
 

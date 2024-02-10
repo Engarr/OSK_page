@@ -12,6 +12,7 @@ const Socialmedia = () => {
         rel='noopener noreferrer'>
         <FacebookSVG />
       </a>
+
       <a
         href='https://www.instagram.com/oskneocar/'
         target='_blank'

@@ -29,6 +29,7 @@ const Btn = ({ text, style, link }: BtnType) => {
   return (
     <a href={link} target='_blank' rel='noopener noreferrer'>
       <motion.button
+        tabIndex={-1}
         className={cn(
           'bg-[var(--main-page-color)] rounded-md shadow-2xl text-[var(--text-white-1)] font-bold tracking-wider ',
           style

@@ -10,13 +10,6 @@ import star from '@/public/images/Star.png';
 import trophy from '@/public/images/Trophy.png';
 import licence from '@/public/images/Licence.png';
 
-export const navLinks = [
-  { name: 'OSKNEOCAR', adress: '/' },
-  { name: 'Cennik', adress: '/cennik' },
-  { name: 'Galeria', adress: '/galeria' },
-  { name: 'Kontakt', adress: '/kontakt' },
-] as const;
-
 export const moreInfo = [
   { img: books, text: 'Materiały do nauki oraz testy GRATIS' },
   { img: smallCar, text: 'Dodatkowe jazdy doszkalające' },
@@ -137,6 +130,7 @@ export const pricePlans = [
       'wszelkie niezbędne materiały do nauki i dostęp do bazy pytań',
       'możliwość rozłożenia płatności na raty',
       'e-learning',
+      'zajęcia praktyczne na NOWYM samochodzie Hyundai i20 (dokładnie taki sam jak w WORD Rzeszów) lub Fiat 500, który podstawiamy na egzamin',
     ],
   },
   {
@@ -154,6 +148,7 @@ export const pricePlans = [
       'sprawnie przeprowadzone wykłady',
       'szybkie terminy jazd',
       'możliwość rozłożenia płatności na raty',
+      'zajęcia praktyczne na NOWYM samochodzie Hyundai i20 (dokładnie taki sam jak w WORD Rzeszów) lub Fiat 500, który podstawiamy na egzamin',
     ],
   },
   {
@@ -171,6 +166,7 @@ export const pricePlans = [
       'sprawnie przeprowadzone wykłady',
       'szybkie terminy jazd',
       'możliwość rozłożenia płatności na raty',
+      'zajęcia praktyczne na NOWYM samochodzie Hyundai i20 (dokładnie taki sam jak w WORD Rzeszów) lub Fiat 500, który podstawiamy na egzamin',
     ],
   },
 ];

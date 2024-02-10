@@ -10,19 +10,18 @@ import PhotoSlider from '@/components/gallery-page/photo-slider/photo-slider';
 import Image, { StaticImageData } from 'next/image';
 import bg from '@/public/images/image_50414849.jpg';
 import FullscreenImage from '@/components/gallery-page/full-screen/full-screen';
-import { useActiveFullScreen } from '@/context/active-full-screen-context';
 
 const Page = () => {
-  const { isFullScreenActive, setIsFullScreenActive } = useActiveFullScreen();
   const [fullscreenImageArr, setFullscreenImageArr] = useState<
     StaticImageData[] | null
   >(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+
   const onClose = () => {
-    setIsFullScreenActive(false);
     setFullscreenImageArr(null);
-    document.body.classList.remove('overflow-hidden');
+    document.body.style.overflowY = 'auto';
   };
+
   return (
     <>
       <div className=' w-screen h-screen opacity-10 fixed top-0 left-0 '>
@@ -60,13 +59,14 @@ const Page = () => {
           />
         </Wrapper>
       </div>
-      {isFullScreenActive && fullscreenImageArr && (
+      {fullscreenImageArr && (
         <div className='sticky top-0 left-0 bottom-0 right-0 w-screen h-screen bg-[var(--black-95)] flex justify-center items-center z-[100] '>
           <FullscreenImage
             onClose={onClose}
             imgIndex={activeImageIndex}
             imagesPaths={fullscreenImageArr}
             setImgIndex={setActiveImageIndex}
+            setFullscreenImageArr={setFullscreenImageArr}
           />
         </div>
       )}
