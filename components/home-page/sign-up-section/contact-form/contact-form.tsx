@@ -13,17 +13,6 @@ import { sendFormData, FormData } from '@/lib/contact-form';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-const btnAnimation = {
-  hidden: {
-    opacity: 0,
-    y: -20,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-  },
-};
-
 const ContactForm = () => {
   const { control, handleSubmit, reset } = useForm<FormData>();
 

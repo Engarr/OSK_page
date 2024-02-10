@@ -46,21 +46,6 @@ const Carousel = ({ imgArr }: CarouselDataType) => {
     }
     return 1;
   };
-  const onIncreaseReviws = () => {
-    const cardsToScroll = getCardsToScroll();
-    if (cardIndex < imgArr.length - 1 - cardsToScroll) {
-      setCardIndex((prev) => prev + 1);
-    } else {
-      return;
-    }
-  };
-  const onDecreaseeReviws = () => {
-    if (cardIndex > 0) {
-      setCardIndex((prev) => prev - 1);
-    } else {
-      return;
-    }
-  };
 
   return (
     <>
