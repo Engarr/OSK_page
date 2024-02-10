@@ -7,7 +7,7 @@ import Wrapper from '../../ui/wrapper';
 
 const WelcomeSection = () => {
   return (
-    <div className='h-[calc(100vh-82px)]  max-h-[838px] relative overflow-hidden '>
+    <div className='h-[calc(100vh-82px)]  max-h-[838px] relative overflow-hidden  '>
       <BackgroundImage />
 
       <Wrapper style='left-1/2 -translate-x-1/2 h-full'>

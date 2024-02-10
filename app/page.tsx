@@ -7,7 +7,7 @@ import Map from '@/components/contact-page/map/map';
 
 export default function Home() {
   return (
-    <main>
+    <div>
       <WelcomeSection />
       <div className='relative'>
         <div className='w-full h-[32px]  bottom-0 gradient-background absolute ' />
@@ -23,6 +23,6 @@ export default function Home() {
           <Map />
         </div>
       </Suspense>
-    </main>
+    </div>
   );
 }

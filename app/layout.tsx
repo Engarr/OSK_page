@@ -32,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className='!scroll-smooth '>
-      <body className={`${poppins.className} overflow-x-hidden`}>
+    <html lang='en' className='!scroll-smooth !overflow-x-hidden'>
+      <body className={`${poppins.className} `}>
         <ContextProvider>
           <Header />
           {children}
