@@ -164,7 +164,7 @@ const Dots = ({
               width={100}
               height={100}
               quality={10}
-              className={cn('object-left-top')}
+              className='0bject-left-top'
             />
           </button>
         );

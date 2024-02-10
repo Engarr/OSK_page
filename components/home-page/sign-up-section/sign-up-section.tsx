@@ -36,7 +36,7 @@ const SignUpSection = () => {
             <Offer />
           </div>
           <NavigateBtn
-            link='/'
+            link='/nowy-kurs'
             text='Poznaj najbliższy termin kursu'
             style='px-4 py-2 text-xs lg:text-lg bg-transparent text-[var(--main-page-color)] border-solid border-2 border-[var(--main-page-color)] bg-[var(--background-white-2)]'
           />

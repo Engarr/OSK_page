@@ -1,6 +1,5 @@
 import React from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
-import { IoClose } from 'react-icons/io5';
 import { motion } from 'framer-motion';
 
 const actions = [

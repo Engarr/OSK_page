@@ -63,7 +63,9 @@ const ContactForm = () => {
 
       <p className='text-xs text-center lg:text-left'>
         Zapisując się akceptujesz{' '}
-        <Link href='/' className='text-[var(--main-page-color)] font-semibold'>
+        <Link
+          href='/polityka-prywatnosci'
+          className='text-[var(--main-page-color)] font-semibold'>
           politykę prywatności.
         </Link>
       </p>

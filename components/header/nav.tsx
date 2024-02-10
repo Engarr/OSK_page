@@ -13,6 +13,21 @@ const Navigation = () => {
   const url = usePathname();
   const [isMenuVisible, setIsMenuVisible] = useState(false);
 
+  const handleToggleMenu = () => {
+    if (isMenuVisible) {
+      setIsMenuVisible(false);
+      document.body.style.overflow = 'auto';
+    } else {
+      setIsMenuVisible(true);
+      document.body.style.overflow = 'hidden';
+    }
+  };
+  const handleNavigation = () => {
+    setIsMenuVisible(false);
+    document.body.style.overflow = 'auto';
+    scrollTo(0, 0);
+  };
+
   return (
     <>
       <motion.div
@@ -20,14 +35,14 @@ const Navigation = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}>
         <MenuToggleButton
-          toggle={setIsMenuVisible}
+          onClick={handleToggleMenu}
           isMenuVisible={isMenuVisible}
         />
       </motion.div>
-      <nav className='flexCenter '>
+      <nav className='flexCenter'>
         <motion.div
           className={cn(
-            'fixed left-0 top-0 bg-[var(--black-95)] w-full h-full transition-all  md:fixed text-center pt-[12.5rem] tracking-wider lg:relative lg:bg-transparent lg:flexCenter lg:flex-row lg:p-0 lg:w-auto lg:h-auto lg:tracking-normal z-40',
+            'absolute left-0 top-0  bg-[var(--black-95)] w-full h-[100vh] transition-all text-center pt-[12.5rem] tracking-wider lg:relative lg:bg-transparent lg:flexCenter lg:flex-row lg:p-0 lg:w-auto lg:h-auto lg:tracking-normal z-40',
             {
               'left-[100%] lg:left-0 ': !isMenuVisible,
             }
@@ -38,8 +53,8 @@ const Navigation = () => {
             <ul className=' flexCenter flex-col lg:flex-row gap-5'>
               {navLinks.map((link) => (
                 <motion.li
+                  onClick={handleNavigation}
                   key={link.name}
-                  onClick={() => setIsMenuVisible(false)}
                   className={cn(
                     'text-xl lg:text-base text-[var(--text-white-1)] hover:text-[var(--main-page-color)] transition-colors',
                     {

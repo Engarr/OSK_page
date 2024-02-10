@@ -8,7 +8,11 @@ type WrapperType = {
 
 const Wrapper = ({ children, style }: WrapperType) => {
   return (
-    <div className={cn('flexCenter relative max-w-[1920px] px-2 ', style)}>
+    <div
+      className={cn(
+        'flex justify-center items-center relative max-w-[1920px] px-2 ',
+        style
+      )}>
       {children}
     </div>
   );

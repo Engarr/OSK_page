@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 type MenuToggleButtonProps = {
-  toggle: React.Dispatch<React.SetStateAction<boolean>>;
+  onClick: () => void;
   isMenuVisible: boolean;
 };
 
@@ -11,12 +11,12 @@ const Path = (props: any) => {
 };
 
 const MenuToggleButton = ({
-  toggle,
+  onClick,
   isMenuVisible = false,
 }: MenuToggleButtonProps) => {
   return (
     <motion.button
-      onClick={() => toggle((prev) => !prev)}
+      onClick={onClick}
       className='z-[999] lg:hidden p-1 outline-[var(--main-page-color)] '
       animate={isMenuVisible ? 'open' : 'closed'}
       type='button'

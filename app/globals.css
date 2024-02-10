@@ -18,7 +18,8 @@
   --black-30: rgba(0, 0, 0, 0.3);
   --white-80: rgba(248, 241, 241, 0.8);
   --white-50: rgba(255, 255, 255, 0.5);
-  --text-white-1: rgb(248, 241, 241);
+  --text-white-1: #ececec;
+  --text-color-2: #6f6f6f;
   --fb-blue: #0866ff;
   --ig-violet: rgb(240, 0, 140);
   --line-color: rgb(163, 210, 202);
