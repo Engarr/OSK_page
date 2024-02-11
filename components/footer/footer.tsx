@@ -46,7 +46,7 @@ const Footer = () => {
               className='mb-2'
             />
             <p className='text-sm'>
-              OSK NEOCAR zajmuję się nauką jazdy, kursami na prawo jazdy kat. B
+              OSK NEOCAR zajmuje się nauką jazdy, kursami na prawo jazdy kat. B
               oraz jazdami doszkalającymi.
             </p>
           </div>
@@ -69,8 +69,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <p className='text-center text-xs mt-10'>
-          Strona wykonana przez firmę Modezp -
+        <div className=' flex text-center text-xs mt-10'>
+          <p>Strona wykonana przez firmę Modezp -</p>
           <a
             href='https://www.modezp.com/'
             target='_blank'
@@ -78,7 +78,7 @@ const Footer = () => {
             className='pl-1 hover:text-[var(--main-page-color)] transition-colors text-blue-400'>
             www.modezp.com
           </a>
-        </p>
+        </div>
       </Wrapper>
     </footer>
   );

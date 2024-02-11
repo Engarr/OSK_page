@@ -37,7 +37,7 @@ const Page = () => {
       <div className='relative '>
         <Wrapper style='left-1/2 -translate-x-1/2 p-0 flex-col '>
           <h2 className=' text-2xl lg:text-3xl mt-5 text-[var(--main-page-color)] font-bold'>
-            Poznaj nas bardziej
+            Poznaj nas lepiej
           </h2>
           <PhotoSlider
             imagesPaths={carsGallery.imgArr}

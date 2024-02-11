@@ -64,14 +64,16 @@ const Needs = () => {
             variants={requirementsVariant}
             initial='hidden'
             animate={isRequirementsInView ? 'visible' : 'hidden'}>
-            <div className='flex items-center justify-start gap-2'>
-              <Image
-                src={r.img}
-                alt='Zdjęcie wymagania'
-                className=''
-                width={50}
-                height={50}
-              />
+            <div className='flex items-center justify-start gap-2 '>
+              <div className='max-w-[40px] max-h-[40px] h-full w-full'>
+                <Image
+                  src={r.img}
+                  alt='Zdjęcie wymagania'
+                  className=''
+                  width={40}
+                  height={40}
+                />
+              </div>
               <p className=' text-xs md:text-sm xl:text-base'>{r.text}</p>
             </div>
             <div className='md:block w-[100%] relative  bg-[var(--line-color)] h-[1px] mt-1 lg:mt-4' />

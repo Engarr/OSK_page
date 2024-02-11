@@ -15,7 +15,7 @@ const infoData = [
   {
     title: 'Dane do przelewu',
     details: [
-      { normal: 'Ośrodek Szkolenia Kierowców NEOCAR', bold: 'NEOCAR' },
+      { normal: 'Ośrodek Szkolenia Kierowców', bold: 'NEOCAR' },
       { normal: 'Numer konta:', bold: '25 1050 1562 1000 0097 7895 4512' },
       {
         normal: 'Tytuł przelewu:',

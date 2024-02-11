@@ -37,17 +37,16 @@ const WhyUs = () => {
         </h3>
       </div>
       <p className='tracking-wider p-2 md:p-0 text-xs md:text-sm xl:text-base'>
-        Naszą misją jest jak najlepsze wykształcenie przyszłych kierowców nie
-        tylko po to aby zdali egzamin za pierwszym razem, ale przede wszystkim
-        po to aby nie stanowili zagrożenia dla siebie i dla innych na drodze.
-        Aby wyszkolić dobrego kierowcę należy pozwolić mu spędzić jak najwięcej
-        czasu za kierownicą. Dlatego staramy się maksymalnie wykorzystać czas
-        nauki, za który płaci nasz Klient. W naszych rękach możesz czuć się
-        bezpiecznie
+        Naszą misją jest zapewnienie jak najlepszego wykształcenia przyszłych
+        kierowców, nie tylko po to, aby zdali egzamin za pierwszym razem, ale
+        przede wszystkim po to, aby nie stanowili zagrożenia dla siebie i dla
+        innych na drodze. Aby wyszkolić dobrego kierowcę należy pozwolić mu
+        spędzić jak najwięcej czasu za kierownicą. Dlatego staramy się
+        maksymalnie wykorzystać czas nauki, za który płaci nasz Klient. W
+        naszych rękach możesz czuć się bezpiecznie.
       </p>
     </motion.div>
   );
 };
 
 export default WhyUs;
-

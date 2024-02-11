@@ -9,7 +9,7 @@ import signupBackgroundImgMobile from '@/public/images/408908176_180042495502334
 
 const SignUpSection = () => {
   return (
-    <section id='signup' className='relative pb-10'>
+    <section id='signup' className='relative pb-10 '>
       <Image
         src={signupBackgroundImg}
         alt=''
@@ -37,6 +37,7 @@ const SignUpSection = () => {
           </div>
           <NavigateBtn
             link='/nowy-kurs'
+            sectionId='new-course'
             text='Poznaj najbliższy termin kursu'
             style='px-4 py-2 text-xs lg:text-lg bg-transparent text-[var(--main-page-color)] border-solid border-2 border-[var(--main-page-color)] bg-[var(--background-white-2)]'
           />

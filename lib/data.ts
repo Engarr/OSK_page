@@ -118,15 +118,14 @@ export const reviews = [
 export const pricePlans = [
   {
     id: 'EKSTERNISTYCZNY',
-    title: 'Kurs podstawowoy kat. B',
+    title: 'Kurs podstawowy kat. B',
     planTitle: 'EKSTERNISTYCZNY',
     price: '2590',
 
     characteristic: [
-      '30h jazd praktycznych',
+      '30 godzin jazd praktycznych',
       'zajęcia z ratownikiem medycznym',
       'jazda po placu egzaminacyjnym WORD',
-      'zajęcia praktyczne na NOWYM samochodzie Hyundai i20 (dokładnie taki sam jak w WORD Rzeszów)',
       'wszelkie niezbędne materiały do nauki i dostęp do bazy pytań',
       'możliwość rozłożenia płatności na raty',
       'e-learning',
@@ -135,15 +134,14 @@ export const pricePlans = [
   },
   {
     id: 'STANDARDOWY',
-    title: 'Kurs podstawowoy kat. B',
+    title: 'Kurs podstawowy kat. B',
     planTitle: 'STANDARDOWY',
     price: '2590',
 
     characteristic: [
-      '30h jazd praktycznych',
+      '30 godzin jazd praktycznych',
       'zajęcia z ratownikiem medycznym',
       'jazda po placu egzaminacyjnym WORD',
-      'zajęcia praktyczne na NOWYM samochodzie Hyundai i20 (dokładnie taki sam jak w WORD Rzeszów)',
       'wszelkie niezbędne materiały do nauki i dostęp do bazy pytań',
       'sprawnie przeprowadzone wykłady',
       'szybkie terminy jazd',
@@ -153,15 +151,14 @@ export const pricePlans = [
   },
   {
     id: 'fast',
-    title: 'Kurs podstawowoy kat. B',
+    title: 'Kurs podstawowy kat. B',
     planTitle: '2-3 TYGODNIE',
     price: '3290',
 
     characteristic: [
-      '30h jazd praktycznych',
+      '30 godzin jazd praktycznych',
       'zajęcia z ratownikiem medycznym',
       'jazda po placu egzaminacyjnym WORD',
-      'zajęcia praktyczne na NOWYM samochodzie Hyundai i20 (dokładnie taki sam jak w WORD Rzeszów)',
       'wszelkie niezbędne materiały do nauki i dostęp do bazy pytań',
       'sprawnie przeprowadzone wykłady',
       'szybkie terminy jazd',

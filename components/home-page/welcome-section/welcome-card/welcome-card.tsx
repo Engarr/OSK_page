@@ -11,7 +11,7 @@ const WelcomeCard = () => {
       <Title />
 
       <motion.div
-        className='bg-[var(--black-80)] flex flex-col md:flex-row gap-1 p-2 rounded-md '
+        className='bg-[var(--black-80)] flex flex-col md:flex-row xl:gap-10 px-3 py-2 rounded-md '
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ type: 'spring', stiffness: 100, delay: 0.5 }}>
@@ -26,4 +26,3 @@ const WelcomeCard = () => {
 };
 
 export default WelcomeCard;
-

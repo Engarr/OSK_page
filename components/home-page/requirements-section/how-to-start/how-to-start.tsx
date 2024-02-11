@@ -61,12 +61,16 @@ const HowToStart = () => {
         Profil Kandydata na Kierowcę czyli numer PKK trzeba wyrobić w wydziale
         komunikacji ze względu na zameldowanie. Do wyrobienia numeru PKK
         potrzebne są badania lekarskie, zdjęcie profil przód, dokument
-        tożsamości (dowód osobisty lub paszport), dodatkowo zgoda rodzica jeżeli
-        jest się osobą nie pełnoletnią
+        tożsamości (dowód osobisty lub paszport). Dodatkowo, jeżeli jest się
+        osobą niepełnoletnią, wymagana jest również zgoda rodzica.
       </p>
       <div className='flexCenter gap-2 xl:gap-4 mt-4'>
-        <DocuementBtn text='Pobierz wniosek PKK' />
         <DocuementBtn
+          text='Pobierz wniosek PKK'
+          road='https://osk-neocar-pl/PKK-NEOCAR.pdf'
+        />
+        <DocuementBtn
+          road='https://osk-neocar-pl/Zgoda-rodzica-NEOCAR.pdf'
           text='Zgoda rodzica'
           style='bg-transparent text-[var(--main-page-color)] border-solid border-2 border-[var(--main-page-color)]'
         />
@@ -80,21 +84,25 @@ export default HowToStart;
 type DocuementBtn = {
   text: string;
   style?: string;
+  road: string;
 };
 
-const DocuementBtn = ({ text, style }: DocuementBtn) => {
+const DocuementBtn = ({ text, style, road }: DocuementBtn) => {
   return (
-    <motion.button
+    <motion.a
+      href={road}
+      target='_blank'
+      rel='noopener noreferrer'
       variants={btnAnimation}
       whileInView='visible'
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       transition={{ type: 'spring', stiffness: 300 }}
       className={cn(
-        'bg-[var(--main-page-color)] rounded-md shadow-2xl text-[var(--text-white-1)] font-semibold tracking-wider px-1 py-2 xl:px-2 xl:py-3 text-sm xl:text-base',
+        'bg-[var(--main-page-color)] rounded-md shadow-2xl text-[var(--text-white-1)] font-semibold tracking-wider px-2 py-3 xl:px-2 xl:py-3 text-xs xl:text-base ',
         style
       )}>
       {text}
-    </motion.button>
+    </motion.a>
   );
 };

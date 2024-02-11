@@ -11,7 +11,7 @@ const RankingPage = () => {
         <Btn
           text='Więcej'
           style='py-2 px-4'
-          link='https://www.prawo-jazdy-360.pl/ranking-szkol-jazdy/rzeszow'
+          link='https://www.prawo-jazdy-360.pl/ranking-szkol-jazdy/osrodek-szkolenia-kierowcow-neocar/rzeszow'
         />
       </div>
     </div>
