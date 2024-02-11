@@ -26,7 +26,8 @@ const WhyUs = () => {
     <motion.div
       ref={ref}
       className='
-      lg:max-w-[34rem]  
+      md:max-w-[34rem]  
+      xl:max-w-[38rem]  
       '
       variants={motionVariants}
       initial='initial'
