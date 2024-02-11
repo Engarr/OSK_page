@@ -29,7 +29,10 @@ const Header = () => {
   return (
     <>
       <motion.header
-        className='flex sticky sm:justify-center justify-between w-[100%] sm:h-[9vh] z-[100] top-0 bg-black text-[var(--text-white-1)] '
+        className={cn(
+          'flex sticky sm:justify-center justify-between w-[100%] sm:h-[82px] z-[100] top-0 bg-black text-[var(--text-white-1)] ',
+          {}
+        )}
         variants={{
           visible: { y: 0 },
           hidden: { y: -200 },

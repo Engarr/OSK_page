@@ -11,8 +11,8 @@ const Countdown = dynamic(
 
 const Page = () => {
   return (
-    <section id='new-course'>
-      <Wrapper style='left-1/2 -translate-x-1/2 flex-col justify-between  h-[100%]'>
+    <section id='new-course' className='target'>
+      <Wrapper style='left-1/2 -translate-x-1/2 flex-col justify-between  h-[100%] '>
         <Countdown />
         <OurLocation />
         <Suspense

@@ -23,7 +23,12 @@
   --fb-blue: #0866ff;
   --ig-violet: rgb(240, 0, 140);
   --line-color: rgb(163, 210, 202);
+  --nav-height: 82px;
 }
+.target {
+  scroll-margin-top: var(--nav-height);
+}
+
 @layer utilities {
   input[type='number']::-webkit-inner-spin-button,
   input[type='number']::-webkit-outer-spin-button {

@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 
 const Page = () => {
   return (
-    <div className='overflow-hidden my-5'>
+    <div className='overflow-hidden my-5 '>
       <Wrapper style='left-1/2 -translate-x-1/2 flex-col lg:mt-20 px-0'>
         <motion.div
           className='flex items-center justify-center rounded-md

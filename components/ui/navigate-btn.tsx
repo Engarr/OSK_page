@@ -23,18 +23,9 @@ const btnAnimation = {
   },
 };
 
-const NavigateBtn = ({ text, style, link, sectionId }: SignUpBtnType) => {
+const NavigateBtn = ({ text, style, link }: SignUpBtnType) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.5, once: true });
-
-  const handleClick = () => {
-    if (sectionId) {
-      const url = `${link}#${sectionId}`;
-      window.location.href = url;
-    } else {
-      window.location.href = link;
-    }
-  };
 
   return (
     <motion.div
@@ -46,8 +37,7 @@ const NavigateBtn = ({ text, style, link, sectionId }: SignUpBtnType) => {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       transition={{ type: 'spring', stiffness: 300 }}
-      className='z-[20]'
-      onClick={handleClick}>
+      className='z-[20]'>
       <Link
         href={link}
         className={cn(

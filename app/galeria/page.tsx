@@ -23,8 +23,8 @@ const Page = () => {
   };
 
   return (
-    <>
-      <div className=' w-screen h-screen opacity-10 fixed top-0 left-0 '>
+    <div>
+      <div className=' w-screen h-screen opacity-10 fixed top-0 left-0'>
         <Image
           src={bg}
           alt='bg'
@@ -70,7 +70,7 @@ const Page = () => {
           />
         </div>
       )}
-    </>
+    </div>
   );
 };
 
