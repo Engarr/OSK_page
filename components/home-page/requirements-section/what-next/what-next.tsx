@@ -40,7 +40,7 @@ const WhatNext = () => {
         jazd, dostosowanych do możliwości kursantów. Po ukończeniu kursu,
         przystępujemy do dwóch egzaminów wewnętrznych (teoretyczny i
         praktyczny). Po ich zaliczeniu aktualizujemy dane w Twoim PKK,
-        pozostawiając jedynie egzaminy państwowe.
+        pozostają jedynie egzaminy państwowe.
       </p>
       <Steps />
     </motion.div>

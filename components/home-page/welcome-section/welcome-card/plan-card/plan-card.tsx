@@ -6,7 +6,7 @@ import AnimateText from '@/components/ui/animate-text';
 import { motion } from 'framer-motion';
 
 const PlanCard = () => {
-  const animateTextStyle = ' font-extrabold pr-1 mt-1 lg:pr-2 lg:mt-2 ';
+  const animateTextStyle = 'font-extrabold pr-1 mt-0 lg:pr-2 lg:mt-2 ';
   return (
     <div className='flexCenter relative'>
       <motion.div
@@ -30,7 +30,7 @@ const PlanCard = () => {
         </div>
 
         <motion.div
-          className=' md:block w-[120%] relative  bg-[var(--line-color)] h-[1px] mt-1 lg:mt-4'
+          className=' md:block w-[120%] relative  bg-[var(--line-color)] h-[1px] mt-0 lg:mt-4'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         />

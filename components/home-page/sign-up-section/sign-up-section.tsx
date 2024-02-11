@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Wrapper from '../../ui/wrapper';
 import ContactForm from './contact-form/contact-form';
 import Offer from './offer/offer';
@@ -6,10 +6,11 @@ import NavigateBtn from '../../ui/navigate-btn';
 import Image from 'next/image';
 import signupBackgroundImg from '@/public/images/408908176_18004249550233455_9060350178127088714_n 1.jpg';
 import signupBackgroundImgMobile from '@/public/images/408908176_18004249550233455_9060350178127088714_n 1_mobile.jpg';
+import Map from '@/components/contact-page/map/map';
 
 const SignUpSection = () => {
   return (
-    <section id='signup' className='relative pb-10 target'>
+    <section id='signup' className='relative  target'>
       <Image
         src={signupBackgroundImg}
         alt=''
@@ -24,7 +25,7 @@ const SignUpSection = () => {
         sizes='100vh'
         className='absolute  opacity-20 inline-block lg:hidden'
       />
-      <Wrapper style='left-1/2 -translate-x-1/2'>
+      <Wrapper style='left-1/2 -translate-x-1/2 flex-col'>
         <div className='flexCenter flex-col mt-[20px] w-full px-2 lg:p-0'>
           <div>
             <h3 className='text-[var(--main-page-color)]  font-bold mb-0 lg:mb-2 text-base md:text-xl xl:text-3xl'>
@@ -35,12 +36,15 @@ const SignUpSection = () => {
             <ContactForm />
             <Offer />
           </div>
-          <NavigateBtn
-            link='/nowy-kurs'
-            text='Poznaj najbliższy termin kursu'
-            style='px-4 py-2 text-xs lg:text-lg bg-transparent text-[var(--main-page-color)] border-solid border-2 border-[var(--main-page-color)] bg-[var(--background-white-2)]'
-          />
         </div>
+        <Suspense
+          fallback={
+            <div className='relative bottom-0 w-full h-[200px] lg:h-[400px] lg:px-5 lg:mt-20' />
+          }>
+          <div className='relative bottom-0 w-full h-[350px] lg:h-[400px] overflow-hidden text-center '>
+            <Map />
+          </div>
+        </Suspense>
       </Wrapper>
     </section>
   );

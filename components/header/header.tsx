@@ -30,7 +30,7 @@ const Header = () => {
     <>
       <motion.header
         className={cn(
-          'flex fixed sm:justify-center justify-between w-[100%] sm:h-[83px] z-[100] top-0 bg-black text-[var(--text-white-1)] ',
+          'flex fixed sm:justify-center justify-between w-[100%] h-[83px] z-[100] top-0 bg-black text-[var(--text-white-1)] ',
           {}
         )}
         variants={{
@@ -50,7 +50,12 @@ const Header = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ type: 'spring', stiffness: 100 }}>
             <Link href='/#glowna'>
-              <Image src={logo} alt='neocar_logo' priority />
+              <Image
+                src={logo}
+                alt='neocar_logo'
+                priority
+                onClick={() => setMenuVisible(false)}
+              />
             </Link>
           </motion.div>
           <div className='hidden lg:flex '>

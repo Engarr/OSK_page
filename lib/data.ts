@@ -39,7 +39,7 @@ export const requirements = [
 export const opinions = [
   { img: star, text: 'Opinia w Google', text_2: '4.9/5' },
   { img: trophy, text: 'Nasza pozycja ', text_2: '3/52' },
-  { img: licence, text: 'Zdawalność za 1 razem', text_2: '80%' },
+  { img: licence, text: 'Zdawalność za 1 razem', text_2: '79%' },
 ] as const;
 
 export const dummyOpinions = [

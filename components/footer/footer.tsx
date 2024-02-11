@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 import React from 'react';
 import Wrapper from '../ui/wrapper';
@@ -34,7 +35,7 @@ const sectionThreeData = [
 
 const Footer = () => {
   return (
-    <footer className=' bg-[var(--black-95)] text-[var(--text-white-1)] py-4 z-50'>
+    <footer className=' bg-[var(--black-95)] text-[var(--text-white-1)] py-5 lg:py-4 z-50'>
       <Wrapper style='left-1/2 -translate-x-1/2 min-h-[250px] flex flex-col '>
         <div className='w-3/4 flex justify-around items-center text-center lg:text-start flex-col xl:flex-row gap-4 lg:gap-1'>
           <div className=' max-w-[20rem] items-center xl:items-start flex flex-col mb-5 xl:mb-0'>
@@ -69,7 +70,19 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className=' flex text-center text-xs mt-10'>
+        <div className='my-5'>
+          <a
+            href='https://www.zlotafirma.pl/company/neocar-4562900'
+            target='_blank'>
+            <img
+              src='https://www.zlotafirma.pl/company-image/4562900-dark.png'
+              className='w-[250px] h-[60px] border:0'
+              alt='NEOCAR - Rzeszów'
+              title='NEOCAR - Rzeszów'
+            />
+          </a>
+        </div>
+        <div className=' flex text-center text-xs mt-2'>
           <p>
             Strona wykonana przez firmę Modezp -{' '}
             <a

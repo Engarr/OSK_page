@@ -1,11 +1,10 @@
 'use client';
 import React from 'react';
-import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 
 type AnimateTextType = {
   text: string;
-  Element?: keyof JSX.IntrinsicElements;
+  el?: keyof JSX.IntrinsicElements;
   style?: string;
 };
 
@@ -18,40 +17,31 @@ const defaultAnimation = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.1 * index,
+      delay: 0.03 * index,
     },
   }),
-
-  whileHover: {
-    scale: [1, 1.4, 0.75, 1.25, 0.9, 1],
-    scaleY: [1, 0.85, 1.25, 0.85, 1.05, 1],
-    transition: {
-      duration: 1,
-      ease: 'easeInOut',
-      times: [0, 0.2, 0.4, 0.6, 0.8, 1],
-    },
-  },
 };
 
-const AnimateText = ({ text, Element = 'p', style }: AnimateTextType) => {
+const AnimateText = ({ text, el: Wrapper = 'p', style }: AnimateTextType) => {
   return (
-    <Element className={cn('inline-block', style)}>
+    <Wrapper className={style}>
       <span className='sr-only'>{text}</span>
-      {text.split('').map((char, index) => (
-        <motion.span
-          key={index}
-          aria-hidden
-          variants={defaultAnimation}
-          initial='hidden'
-          animate='visible'
-          whileHover='whileHover'
-          transition={{ type: 'spring', stiffness: 300 }}
-          custom={index}
-          className=''>
-          {char}
-        </motion.span>
-      ))}
-    </Element>
+      <motion.span
+        aria-hidden
+        initial='hidden'
+        animate='visible'
+        whileHover='whileHover'>
+        {text.split('').map((char, index) => (
+          <motion.span
+            key={index}
+            aria-hidden
+            variants={defaultAnimation}
+            custom={index}>
+            {char}
+          </motion.span>
+        ))}
+      </motion.span>
+    </Wrapper>
   );
 };
 
