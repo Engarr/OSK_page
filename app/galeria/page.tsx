@@ -23,8 +23,8 @@ const Page = () => {
   };
 
   return (
-    <div>
-      <div className=' w-screen h-screen opacity-10 fixed top-0 left-0'>
+    <>
+      <section className=' w-screen h-screen opacity-10 fixed top-0 left-0 '>
         <Image
           src={bg}
           alt='bg'
@@ -33,8 +33,8 @@ const Page = () => {
           className='object-cover'
           quality={40}
         />
-      </div>
-      <div className='relative '>
+      </section>
+      <div className='relative pt-[82px]'>
         <Wrapper style='left-1/2 -translate-x-1/2 p-0 flex-col '>
           <h2 className=' text-2xl lg:text-3xl mt-5 text-[var(--main-page-color)] font-bold'>
             Poznaj nas lepiej
@@ -70,7 +70,7 @@ const Page = () => {
           />
         </div>
       )}
-    </div>
+    </>
   );
 };
 

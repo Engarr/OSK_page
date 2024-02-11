@@ -13,7 +13,7 @@ const Page = () => {
       <Wrapper style='left-1/2 -translate-x-1/2 flex-col lg:mt-20 px-0'>
         <motion.div
           className='flex items-center justify-center rounded-md
-          w-full flex-col-reverse lg:flex-row gap-4 xl:gap-5 mb-10 xl:mb-0 px-2'
+          w-full flex-col-reverse lg:flex-row gap-4 xl:gap-5 mb-10 xl:mb-0 px-2 mt-[83px]'
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}>
           <ContactForm />

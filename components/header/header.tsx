@@ -30,7 +30,7 @@ const Header = () => {
     <>
       <motion.header
         className={cn(
-          'flex sticky sm:justify-center justify-between w-[100%] sm:h-[82px] z-[100] top-0 bg-black text-[var(--text-white-1)] ',
+          'flex fixed sm:justify-center justify-between w-[100%] sm:h-[83px] z-[100] top-0 bg-black text-[var(--text-white-1)] ',
           {}
         )}
         variants={{
@@ -49,7 +49,7 @@ const Header = () => {
             animate={{ opacity: 1 }}
             whileHover={{ scale: 1.02 }}
             transition={{ type: 'spring', stiffness: 100 }}>
-            <Link href='/'>
+            <Link href='/#glowna'>
               <Image src={logo} alt='neocar_logo' priority />
             </Link>
           </motion.div>

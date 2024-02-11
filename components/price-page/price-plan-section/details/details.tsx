@@ -27,7 +27,7 @@ const infoData = [
 
 const Details = () => {
   return (
-    <div className='flex flex-col bg-[var(--white-50)] py-5 px-2 w-full xl:w-[90%] rounded-md mt-1 xl:mt-[2rem]'>
+    <div className='flex flex-col bg-[var(--white-50)] py-5 px-2 w-full xl:w-[90%] rounded-md mt-5 xl:mt-[2rem]'>
       <div className=' text-sm sm:text-base lg:text-lg xl:text-2xl flex items-center justify-center flex-col gap-2 mb-2 xl:mb-10 '>
         <h3 className='font-bold text-center lg:text-start'>
           !!! Promocja dla wszystkich uczniów - dodatkowe 2 godziny jazdy gratis

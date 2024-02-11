@@ -7,7 +7,7 @@ import Map from '@/components/contact-page/map/map';
 
 export default function Home() {
   return (
-    <div>
+    <div className='mt-[83px] target' id='glowna'>
       <WelcomeSection />
       <div className='relative'>
         <div className='w-full h-[32px]  bottom-0 gradient-background absolute ' />
