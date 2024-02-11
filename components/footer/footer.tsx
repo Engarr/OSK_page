@@ -70,14 +70,16 @@ const Footer = () => {
           </div>
         </div>
         <div className=' flex text-center text-xs mt-10'>
-          <p>Strona wykonana przez firmę Modezp -</p>
-          <a
-            href='https://www.modezp.com/'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='pl-1 hover:text-[var(--main-page-color)] transition-colors text-blue-400'>
-            www.modezp.com
-          </a>
+          <p>
+            Strona wykonana przez firmę Modezp -{' '}
+            <a
+              href='https://www.modezp.com/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='pl-1 hover:text-[var(--main-page-color)] transition-colors text-blue-400'>
+              www.modezp.com
+            </a>
+          </p>
         </div>
       </Wrapper>
     </footer>
