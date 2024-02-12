@@ -50,6 +50,13 @@ const Footer = () => {
               OSK NEOCAR zajmuje się nauką jazdy, kursami na prawo jazdy kat. B
               oraz jazdami doszkalającymi.
             </p>
+            <a
+              href='https://osk-neocar.pl/umowa'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-sm mt-1 text-blue-400 hover:text-[var(--text-white-1)] transition-colors'>
+              Regulamin
+            </a>
           </div>
 
           <div className=' flex gap-2 flex-col md:flex-row justify-around w-full'>
