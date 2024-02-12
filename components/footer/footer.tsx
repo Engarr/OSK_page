@@ -51,7 +51,7 @@ const Footer = () => {
               oraz jazdami doszkalającymi.
             </p>
             <a
-              href='https://osk-neocar.pl/umowa'
+              href='https://osk-neocar.pl/umowa.pdf'
               target='_blank'
               rel='noopener noreferrer'
               className='text-sm mt-1 text-blue-400 hover:text-[var(--text-white-1)] transition-colors'>

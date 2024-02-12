@@ -67,10 +67,10 @@ const HowToStart = () => {
       <div className='flexCenter gap-2 xl:gap-4 mt-4'>
         <DocuementBtn
           text='Pobierz wniosek PKK'
-          road='https://osk-neocar-pl/PKK-NEOCAR.pdf'
+          road='https://osk-neocar.pl/PKK-NEOCAR.pdf'
         />
         <DocuementBtn
-          road='https://osk-neocar-pl/Zgoda-rodzica-NEOCAR.pdf'
+          road='https://osk-neocar.pl/Zgoda-rodzica-NEOCAR.pdf'
           text='Zgoda rodzica'
           style='bg-transparent text-[var(--main-page-color)] border-solid border-2 border-[var(--main-page-color)]'
         />

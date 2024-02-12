@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
     },
   ];
   return (
-    <div className='flex gap-2'>
+    <div className='flex gap-2 mt-7'>
       <Wrapper style='flex-col  items-start left-1/2 -translate-x-1/2  max-w-[1080px] gap-3 py-10'>
         <h2 className='font-bold text-xl xl:text-3xl text-center w-full py-10'>
           Polityka Prywatności
