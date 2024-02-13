@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 
 const Page = () => {
   return (
-    <div className='overflow-hidden my-5 '>
+    <div className='overflow-hidden mt-5 '>
       <Wrapper style='left-1/2 -translate-x-1/2 flex-col lg:mt-20 px-0'>
         <motion.div
           className='flex items-center justify-center rounded-md
@@ -29,7 +29,7 @@ const Page = () => {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className='relative bottom-0 w-full h-[350px] lg:h-[400px] lg:px-5   overflow-hidden text-center '>
+            className='relative bottom-0 w-full h-[350px] lg:h-[400px] px-2   overflow-hidden text-center '>
             <Map />
           </motion.div>
         </Suspense>

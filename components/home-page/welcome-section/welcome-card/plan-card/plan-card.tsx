@@ -1,12 +1,32 @@
 'use client';
-import React from 'react';
+import React, { useMemo, useState } from 'react';
 import Image from 'next/image';
 import car from '@/public/images/car.png';
 import AnimateText from '@/components/ui/animate-text';
 import { motion } from 'framer-motion';
+import { DataState } from '@/lib/acf-type';
 
 const PlanCard = () => {
   const animateTextStyle = 'font-extrabold pr-1 mt-0 lg:pr-2 lg:mt-2 ';
+  const [data, setData] = useState<DataState>({
+    pageData: [],
+    loading: true,
+  });
+
+  useMemo(async () => {
+    const response = await fetch(
+      'https://osk-neocar.pl/wp/wp-json/wp/v2/info?acf_format=standard&_fields=id,title,acf'
+    );
+    const pageData = await response.json();
+    setData({ pageData, loading: false });
+  }, []);
+
+  const priceForBasicCourse = data.loading
+    ? 'Ładowanie...'
+    : data &&
+      data.pageData[0]?.acf &&
+      data.pageData[0].acf.cena_za_kurs_podstawowy.toString();
+
   return (
     <div className='flexCenter relative'>
       <motion.div
@@ -22,11 +42,26 @@ const PlanCard = () => {
         </motion.h2>
 
         <div className='flex items-end'>
-          <AnimateText
-            style={`${animateTextStyle} text-2xl lg:text-3xl lg:text-4xl`}
-            text='2590'
-          />
-          <AnimateText style={`${animateTextStyle} text-base `} text='PLN' />
+          {data.loading ? (
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className={`${animateTextStyle}  ml-1 text-2xl lg:text-3xl xl:text-4xl`}>
+              Ładowanie...
+            </motion.p>
+          ) : (
+            <>
+              <motion.p
+                className={`${animateTextStyle}  text-2xl lg:text-3xl xl:text-4xl`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}>
+                {priceForBasicCourse}
+                <span className={`${animateTextStyle} text-base ml-1`}>
+                  PLN
+                </span>
+              </motion.p>
+            </>
+          )}
         </div>
 
         <motion.div

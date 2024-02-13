@@ -13,7 +13,6 @@ import maneuveringAreaOne from '@/public/images/gallery/maneuvering_area_1.jpg';
 import maneuveringAreaTwo from '@/public/images/gallery/maneuvering_area_2.jpg';
 import maneuveringAreaThree from '@/public/images/gallery/maneuvering_area_3.jpg';
 import maneuveringAreaFour from '@/public/images/gallery/maneuvering_area_4.jpg';
-import maneuveringAreaFive from '@/public/images/gallery/maneuvering_area_5.jpg';
 
 export const carsGallery = {
   title: 'Samochody',
@@ -26,9 +25,8 @@ export const officeGallery = {
 export const maneuveringAreaGallery = {
   title: 'Plac manewrowy',
   imgArr: [
-    maneuveringAreaFive,
-    maneuveringAreaTwo,
     maneuveringAreaThree,
+    maneuveringAreaTwo,
     maneuveringAreaFour,
     maneuveringAreaOne,
   ],

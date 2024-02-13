@@ -15,11 +15,9 @@ type SignUpBtnType = {
 const btnAnimation = {
   hidden: {
     opacity: 0,
-    y: -20,
   },
   visible: {
     opacity: 1,
-    y: 0,
   },
 };
 
@@ -36,7 +34,6 @@ const NavigateBtn = ({ text, style, link }: SignUpBtnType) => {
       animate={isInView ? 'visible' : 'hidden'}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      transition={{ type: 'spring', stiffness: 300 }}
       className='z-[20]'>
       <Link
         href={link}

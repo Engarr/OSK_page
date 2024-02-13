@@ -1,12 +1,13 @@
+'use client';
 import React, { Suspense } from 'react';
 import Wrapper from '../../ui/wrapper';
 import ContactForm from './contact-form/contact-form';
 import Offer from './offer/offer';
-import NavigateBtn from '../../ui/navigate-btn';
 import Image from 'next/image';
 import signupBackgroundImg from '@/public/images/408908176_18004249550233455_9060350178127088714_n 1.jpg';
 import signupBackgroundImgMobile from '@/public/images/408908176_18004249550233455_9060350178127088714_n 1_mobile.jpg';
 import Map from '@/components/contact-page/map/map';
+import { motion } from 'framer-motion';
 
 const SignUpSection = () => {
   return (
@@ -26,9 +27,12 @@ const SignUpSection = () => {
         className='absolute  opacity-20 inline-block lg:hidden'
       />
       <Wrapper style='left-1/2 -translate-x-1/2 flex-col'>
-        <div className='flexCenter flex-col mt-[20px] w-full px-2 lg:p-0'>
+        <motion.div
+          className='flexCenter flex-col mt-[20px] w-full px-2 lg:p-0'
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}>
           <div>
-            <h3 className='text-[var(--main-page-color)]  font-bold mb-0 lg:mb-2 text-base md:text-xl xl:text-3xl'>
+            <h3 className='text-[var(--main-page-color)]  font-bold mb-0 lg:mb-2 text-lg md:text-xl xl:text-3xl'>
               Zapisz się teraz
             </h3>
           </div>
@@ -36,7 +40,7 @@ const SignUpSection = () => {
             <ContactForm />
             <Offer />
           </div>
-        </div>
+        </motion.div>
         <Suspense
           fallback={
             <div className='relative bottom-0 w-full h-[200px] lg:h-[400px] lg:px-5 lg:mt-20' />

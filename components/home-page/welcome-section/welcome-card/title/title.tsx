@@ -15,7 +15,7 @@ const Title = () => {
         <Image src={logo} alt='logo' className='' width={500} priority />
       </motion.div>
       <div className='flexCenter text-lg s:text-xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-[var(--text-white-1)] font-bold w-full z-20'>
-        <AnimateText text='Ośrodek Szkolenia Kieroców ' style='' el='h1' />
+        <AnimateText text='Ośrodek Szkolenia Kierowców ' style='' el='h1' />
       </div>
 
       <NavigateBtn

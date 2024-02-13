@@ -9,6 +9,7 @@ export const sendFormData = async (data: FormData, url: string) => {
   for (const [key, value] of Object.entries(data)) {
     formBody.append(key, value.toString());
   }
+  formBody.append('_wpcf7_unit_tag', '_wpcf7_unit_tag');
   try {
     const response = await fetch(url, {
       method: 'POST',

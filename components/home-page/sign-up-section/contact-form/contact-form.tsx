@@ -12,12 +12,24 @@ import {
 import { sendFormData, FormData } from '@/lib/contact-form';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import toast from 'react-hot-toast';
 
 const ContactForm = () => {
   const { control, handleSubmit, reset } = useForm<FormData>();
 
   const onSubmit: SubmitHandler<FormData> = async (data) => {
-    console.log('ESSA');
+    const url =
+      'https://osk-neocar.pl/wp/wp-json/contact-form-7/v1/contact-forms/6/feedback';
+
+    try {
+      const result = await sendFormData(data, url);
+      if (result) {
+        toast.success('Twoje dane zostały przesłane.');
+      }
+      reset();
+    } catch (error) {
+      toast.error('Coś poszło nie tak, spróbuj ponownie później.');
+    }
   };
 
   return (
@@ -46,7 +58,11 @@ const ContactForm = () => {
         control={control}
         defaultValue=''
         render={({ field }) => (
-          <Input field={field} type='text' placeholder='Twoj numer telefonu' />
+          <Input
+            field={field}
+            type='number'
+            placeholder='Twoj numer telefonu'
+          />
         )}
       />
 

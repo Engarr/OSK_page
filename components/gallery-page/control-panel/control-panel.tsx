@@ -22,7 +22,8 @@ const ControlPanel = ({ onClose, onNext, onPrev }: ControlPanelType) => {
   return (
     <div className='absolute bottom-[5%] left-1/2 -translate-x-1/2 w-[200px] h-[50px] bg-[var(--white-50)] z-[110] flex justify-around items-center rounded-2xl  font-semibold'>
       {actions.map(({ Icon, action }, index) => (
-        <motion.div
+        <motion.button
+          type='button'
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           key={index}
@@ -37,7 +38,7 @@ const ControlPanel = ({ onClose, onNext, onPrev }: ControlPanelType) => {
             )
           }>
           {typeof Icon !== 'string' ? <Icon /> : Icon}
-        </motion.div>
+        </motion.button>
       ))}
     </div>
   );

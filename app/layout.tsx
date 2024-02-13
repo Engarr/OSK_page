@@ -3,6 +3,7 @@ import { Poppins } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/header/header';
 import Footer from '@/components/footer/footer';
+import Toast from '@/components/ui/toast';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -38,6 +39,7 @@ export default function RootLayout({
     <html lang='en' className='!scroll-smooth'>
       <body className={`${poppins.className} `}>
         <Header />
+        <Toast />
         {children}
         <Footer />
       </body>
