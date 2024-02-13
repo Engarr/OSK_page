@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import { DataState } from '@/lib/acf-type';
 
 const PlanCard = () => {
-  const animateTextStyle = 'font-extrabold pr-1 mt-0 lg:pr-2 lg:mt-2 ';
+  const textStyle = 'font-extrabold pr-1 mt-0 lg:pr-2 lg:mt-2 ';
   const [data, setData] = useState<DataState>({
     pageData: [],
     loading: true,
@@ -22,7 +22,7 @@ const PlanCard = () => {
   }, []);
 
   const priceForBasicCourse = data.loading
-    ? 'Ładowanie...'
+    ? '2590'
     : data &&
       data.pageData[0]?.acf &&
       data.pageData[0].acf.cena_za_kurs_podstawowy.toString();
@@ -42,26 +42,13 @@ const PlanCard = () => {
         </motion.h2>
 
         <div className='flex items-end'>
-          {data.loading ? (
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className={`${animateTextStyle}  ml-1 text-2xl lg:text-3xl xl:text-4xl`}>
-              Ładowanie...
-            </motion.p>
-          ) : (
-            <>
-              <motion.p
-                className={`${animateTextStyle}  text-2xl lg:text-3xl xl:text-4xl`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}>
-                {priceForBasicCourse}
-                <span className={`${animateTextStyle} text-base ml-1`}>
-                  PLN
-                </span>
-              </motion.p>
-            </>
-          )}
+          <motion.p
+            className={`${textStyle}  text-2xl lg:text-3xl xl:text-4xl`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}>
+            {priceForBasicCourse}
+            <span className={`${textStyle} text-base ml-1`}>PLN</span>
+          </motion.p>
         </div>
 
         <motion.div
