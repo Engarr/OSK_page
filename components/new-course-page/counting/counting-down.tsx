@@ -77,7 +77,7 @@ const Countdown = (): JSX.Element => {
         animate={{ opacity: 1 }}>
         <p className='flexCenter flex-col gap-4'>
           Kurs rozpoczął się!{' '}
-          <span className='text-[var(--text-color-2)]'>
+          <span className='text-[var(--text-color-2)] text-base lg:text-xl'>
             dnia {formattedDate} r. o godz. {formattedTime}
           </span>
         </p>

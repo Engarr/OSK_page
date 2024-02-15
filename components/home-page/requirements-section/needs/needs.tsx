@@ -49,11 +49,11 @@ const Needs = () => {
     '>
       <motion.h3
         ref={ref}
-        className='font-bold text-[var(--main-page-color)] text-base md:text-xl xl:text-3xl  mb-1 xl:mb-3 text-center md:text-start '
+        className='font-bold text-[var(--main-page-color)]  mb-1 xl:mb-3 text-center md:text-start text-base md:text-xl xl:text-3xl'
         variants={titleVariant}
         initial='initial'
         animate={isTitleInView ? 'visible' : 'initial'}>
-        Wymagania do rozpoczęcia kursu:
+        Wymagania do wyrobienia PKK w wydziale komunikacji:
       </motion.h3>
       <div ref={refReq}>
         {requirements.map((r, index) => (

@@ -5,9 +5,9 @@ export default function cloudinaryLoader({
   width: number;
   quality?: number;
 }) {
-  if (src.startsWith('https://')) {
-    return src;
-  } else {
-    return `https://osk-neocar.pl/${src}`;
-  }
+  // if (src.startsWith('https://')) {
+  //   return src;
+  // } else {
+  //   return `https://osk-neocar.pl/${src}`;
+  // }
 }

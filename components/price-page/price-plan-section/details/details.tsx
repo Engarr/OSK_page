@@ -37,8 +37,8 @@ const Details = () => {
     <div className='flex flex-col bg-[var(--white-50)] py-5 px-2 w-full xl:w-[90%] rounded-md mt-5 xl:mt-[2rem]'>
       <div className=' text-sm sm:text-base lg:text-lg xl:text-2xl flex items-center justify-center flex-col gap-2 mb-2 xl:mb-10 '>
         <h3 className='font-bold text-center lg:text-start'>
-          !!! Promocja dla wszystkich uczniów - dodatkowe 2 godziny jazdy gratis
-          !!!
+          Promocja dla wszystkich uczniów i studentów - dodatkowe 2 godziny
+          jazdy gratis !!!
         </h3>
         <div className='h-[2px] w-[60%] bg-[var(--main-page-color-40)]' />
       </div>

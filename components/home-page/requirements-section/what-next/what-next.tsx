@@ -39,7 +39,7 @@ const WhatNext = () => {
         płynnie do nauki praktycznej jazdy. Kurs podstawowy obejmuje 30 godzin
         jazd, dostosowanych do możliwości kursantów. Po ukończeniu kursu,
         przystępujemy do dwóch egzaminów wewnętrznych (teoretyczny i
-        praktyczny). Po ich zaliczeniu aktualizujemy dane w Twoim PKK,
+        praktyczny). Po ich zaliczeniu aktualizujemy dane w Twoim PKK i
         pozostają jedynie egzaminy państwowe.
       </p>
       <Steps />

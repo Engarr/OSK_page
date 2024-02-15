@@ -62,7 +62,8 @@ const HowToStart = () => {
         komunikacji ze względu na zameldowanie. Do wyrobienia numeru PKK
         potrzebne są badania lekarskie, zdjęcie profil przód, dokument
         tożsamości (dowód osobisty lub paszport). Dodatkowo, jeżeli jest się
-        osobą niepełnoletnią, wymagana jest również zgoda rodzica.
+        osobą niepełnoletnią, wymagana jest również zgoda rodzica. Wyrobiony
+        profil przynosimy do OSK, aby wybrać rodzaj kursu.
       </p>
       <div className='flexCenter gap-2 xl:gap-4 mt-4'>
         <DocuementBtn

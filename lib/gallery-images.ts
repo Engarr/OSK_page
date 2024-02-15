@@ -16,11 +16,11 @@ import maneuveringAreaFour from '@/public/images/gallery/maneuvering_area_4.jpg'
 
 export const carsGallery = {
   title: 'Samochody',
-  imgArr: [carOne, carTwo, carThree, carFour, carFive],
+  imgArr: [carThree, carFour, carFive, carTwo],
 };
 export const officeGallery = {
   title: 'Biuro',
-  imgArr: [officeOne, officeTwo, officeThree, officeFour],
+  imgArr: [officeOne, officeTwo, officeFour, officeThree],
 };
 export const maneuveringAreaGallery = {
   title: 'Plac manewrowy',

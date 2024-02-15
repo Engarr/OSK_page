@@ -152,7 +152,7 @@ export const pricePlans = [
   {
     id: 'fast',
     title: 'Kurs podstawowy kat. B',
-    planTitle: '2-3 TYGODNIE',
+    planTitle: 'PRZYŚPIESZONY',
     price: '3290',
 
     characteristic: [
@@ -164,6 +164,7 @@ export const pricePlans = [
       'szybkie terminy jazd',
       'możliwość rozłożenia płatności na raty',
       'zajęcia praktyczne na NOWYM samochodzie Hyundai i20 (dokładnie taki sam jak w WORD Rzeszów) lub Fiat 500, który podstawiamy na egzamin',
+      'czas trwania kursu 2-3 tygodnie',
     ],
   },
 ];
