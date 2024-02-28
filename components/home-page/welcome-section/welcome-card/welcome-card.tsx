@@ -11,10 +11,10 @@ const WelcomeCard = () => {
       <Title />
 
       <motion.div
-        className='bg-[var(--black-80)] flex flex-col md:flex-row xl:gap-10 gap-1 p-2 rounded-md mt-3 xs:mt-10 md:mt-[100px] opacity-0'
+        className='bg-[var(--black-80)] flex flex-col md:flex-row xl:gap-10 gap-1 p-2 rounded-md mt-3 xs:mt-10 md:mt-[100px] opacity-0 '
         initial={{ opacity: 0, y: -5 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 0.3 }}>
+        transition={{ delay: 0.5, duration: 0.3, stiffness: 500 }}>
         {moreInfo.map((i, index) => (
           <React.Fragment key={index}>
             <InfoBox img={i.img} text={i.text} />
