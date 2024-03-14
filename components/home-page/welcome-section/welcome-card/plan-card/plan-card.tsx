@@ -21,7 +21,7 @@ const PlanCard = () => {
     setData({ pageData, loading: false });
   }, []);
 
-  const priceForBasicCourse = !data.loading
+  const priceForBasicCourse = data.loading
     ? '.... '
     : data &&
       data.pageData[0]?.acf &&
