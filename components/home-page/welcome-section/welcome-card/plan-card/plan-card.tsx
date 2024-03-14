@@ -21,8 +21,8 @@ const PlanCard = () => {
     setData({ pageData, loading: false });
   }, []);
 
-  const priceForBasicCourse = data.loading
-    ? '2590'
+  const priceForBasicCourse = !data.loading
+    ? '.... '
     : data &&
       data.pageData[0]?.acf &&
       data.pageData[0].acf.cena_za_kurs_podstawowy.toString();
